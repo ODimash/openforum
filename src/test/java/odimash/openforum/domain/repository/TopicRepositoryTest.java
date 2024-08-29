@@ -2,6 +2,7 @@ package odimash.openforum.domain.repository;
 
 import odimash.openforum.domain.entity.*;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,7 @@ class TopicRepositoryTest {
 
     @BeforeEach
     void setUp() {
+        tearDown();
         forum = new Forum();
         forum.setName("Test Forum");
         forumRepository.save(forum);
@@ -48,6 +50,13 @@ class TopicRepositoryTest {
         topic.setAuthor(author);
         topic.setComments(new HashSet<>());
         topicRepository.save(topic);
+    }
+
+    @AfterEach
+    void tearDown() {
+        topicRepository.deleteAll();
+        userRepository.deleteAll();
+        forumRepository.deleteAll();
     }
 
     @Test

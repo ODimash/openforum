@@ -12,6 +12,8 @@ public interface ForumRepository extends JpaRepository<Forum, Long> {
 
     @Query("SELECT f FROM Forum f WHERE f.parentForum.id = :parentId")
     List<Forum> findSubCategoriesById(@Param("parentId") Long parentId);
+    Optional<Forum> findByNameAndParentForum(String name, Forum parentForum);
 
+    Optional<Forum> findByNameAndParentForumId(String name, Long parentForumId);
     Optional<Forum> findByName(String name);
 }

@@ -59,6 +59,46 @@ class ForumRepositoryTest {
     }
 
     @Test
+    void testFindByNameAndParentForum() {
+        Forum parentForum = new Forum();
+        parentForum.setName("Parent Forum");
+        forumRepository.save(parentForum);
+
+        Forum expectedChildForum = new Forum();
+        expectedChildForum.setName("Child Forum");
+        expectedChildForum.setParentForum(parentForum);
+        forumRepository.save(expectedChildForum);
+
+        Forum otherChildForum = new Forum();
+        otherChildForum.setName("Child Forum");
+        forumRepository.save(otherChildForum);
+
+        Optional<Forum> foundForum = forumRepository.findByNameAndParentForum(expectedChildForum.getName(), parentForum);
+
+        assertThat(foundForum.get()).isEqualTo(expectedChildForum);
+    }
+
+    @Test
+    void testFindByNameAndParentId() {
+        Forum parentForum = new Forum();
+        parentForum.setName("Parent Forum");
+        forumRepository.save(parentForum);
+
+        Forum expectedChildForum = new Forum();
+        expectedChildForum.setName("Child Forum");
+        expectedChildForum.setParentForum(parentForum);
+        forumRepository.save(expectedChildForum);
+
+        Forum otherChildForum = new Forum();
+        otherChildForum.setName("Child Forum");
+        forumRepository.save(otherChildForum);
+
+        Optional<Forum> foundForum = forumRepository.findByNameAndParentForumId(expectedChildForum.getName(), parentForum.getId());
+
+        assertThat(foundForum.get()).isEqualTo(expectedChildForum);
+    }
+
+    @Test
     void testDelete() {
         Forum forum = new Forum();
         forum.setName("To be deleted");
