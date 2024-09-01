@@ -24,11 +24,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import jakarta.transaction.Transactional;
 import odimash.openforum.domain.entity.Forum;
 import odimash.openforum.domain.repository.ForumRepository;
+import odimash.openforum.exception.EntityNameIsAlreadyTakenException;
+import odimash.openforum.exception.EntityNotFoundByIdException;
 import odimash.openforum.infrastructure.database.dto.ForumDTO;
 import odimash.openforum.infrastructure.database.mapper.ForumMapper;
-import odimash.openforum.service.exception.EntityDoesNotExistException;
-import odimash.openforum.service.exception.EntityNameIsAlreadyTakenException;
-import odimash.openforum.service.exception.EntityNotFoundByIdException;
 
 @SpringBootTest
 @Transactional
@@ -95,17 +94,15 @@ public class ForumServiceTest {
     }
 
     @Test
-    public void testUpdateForum_ShouldThrowException_WhenEntityDoesNotExist() {
-        ForumDTO notExisForumDTO = new ForumDTO(null, "Not exist forum", null);
+    public void testUpdateForum_ShouldThrowException_WhenIdIsNull() {
+        forumDTO.setId(null);
 
-        EntityDoesNotExistException thrown = assertThrows(
-            EntityDoesNotExistException.class,
-            () -> forumService.updateForum(notExisForumDTO)
+        Exception thrown = assertThrows(
+            IllegalArgumentException.class,
+            () -> forumService.updateForum(forumDTO)
         );
 
-        assertThat(thrown.getMessage()).isEqualTo(
-            String.format("The entity \"%s\" with name \"%s\" does not exist",
-            Forum.class.getSimpleName(), notExisForumDTO.getName()));
+        assertThat(thrown.getMessage()).isEqualTo("Forum ID can not be null for update");
     }
 
     @Test
@@ -125,7 +122,7 @@ public class ForumServiceTest {
     public void testReadForum_ShouldThrowException_WhenEntityDoesNotExist() {
         when(forumRepository.findById(forumDTO.getId())).thenReturn(Optional.empty());
 
-        EntityNotFoundByIdException thrown = assertThrows(
+        Exception thrown = assertThrows(
             EntityNotFoundByIdException.class,
             () -> forumService.readForumById(forumDTO.getId())
         );
@@ -141,9 +138,7 @@ public class ForumServiceTest {
     @Test
     public void testDeleteForum_ShouldBeSuccess() {
         doNothing().when(forumRepository).deleteById(forumDTO.getId());
-
         forumService.deleteForum(forumDTO.getId());
-
         verify(forumRepository, times(1)).deleteById(forumDTO.getId());
     }
 

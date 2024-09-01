@@ -23,8 +23,8 @@ public class User {
     private String email;
     private String password;
 
-    @Transient
-    private String passwordConfirm;
+    // @Transient
+    // private String passwordConfirm;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(

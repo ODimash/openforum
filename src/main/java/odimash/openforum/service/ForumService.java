@@ -10,11 +10,10 @@ import org.springframework.stereotype.Service;
 
 import odimash.openforum.domain.entity.Forum;
 import odimash.openforum.domain.repository.ForumRepository;
+import odimash.openforum.exception.EntityNameIsAlreadyTakenException;
+import odimash.openforum.exception.EntityNotFoundByIdException;
 import odimash.openforum.infrastructure.database.dto.ForumDTO;
 import odimash.openforum.infrastructure.database.mapper.ForumMapper;
-import odimash.openforum.service.exception.EntityDoesNotExistException;
-import odimash.openforum.service.exception.EntityNameIsAlreadyTakenException;
-import odimash.openforum.service.exception.EntityNotFoundByIdException;
 
 @Service
 public class ForumService {
@@ -47,7 +46,7 @@ public class ForumService {
 
     public ForumDTO updateForum(ForumDTO updateForumDTO) {
         if (updateForumDTO.getId() == null) {
-            throw new EntityDoesNotExistException(Forum.class, updateForumDTO.getName());
+            throw new IllegalArgumentException("Forum ID can not be null for update");
         }
 
         if (forumRepository.findById(updateForumDTO.getId()).isEmpty()) {
@@ -59,12 +58,11 @@ public class ForumService {
     }
 
     public void deleteForum(Long id) {
-
-        try {
-            forumRepository.deleteById(id);
-        } catch (IllegalArgumentException e) {
-            throw e;
+        if (id == null) {
+            throw new IllegalArgumentException("Forum ID can not be null for deleting");
         }
+
+        forumRepository.deleteById(id);
     }
 
     public List<String> getPathAString(Long currentForumId) {

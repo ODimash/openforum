@@ -11,5 +11,6 @@ import java.util.Optional;
 
 public interface CommentRepository extends JpaRepository<Comment, Long> {
     Set<Comment> findByTopic(Topic topic);
+    Set<Comment> findByTopicId(Long id);
     Optional<Comment> findByAuthor(User author);
 }

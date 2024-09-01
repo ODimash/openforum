@@ -1,4 +1,4 @@
-package odimash.openforum.service.exception;
+package odimash.openforum.exception;
 
 @SuppressWarnings("rawtypes")
 public class EntityNameIsAlreadyTakenException extends RuntimeException {

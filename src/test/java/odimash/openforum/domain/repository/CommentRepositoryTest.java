@@ -69,4 +69,14 @@ class CommentRepositoryTest {
         assertThat(foundComments).isNotEmpty();
         assertThat(foundComments.iterator().next().getTopic().getId()).isEqualTo(topic.getId());
     }
+
+    @Test
+    void testFindByTopicId_WhenNotComments() {
+        commentRepository.delete(comment);
+        Set<Comment> foundComments = commentRepository.findByTopicId(topic.getId());
+
+        assertThat(foundComments).isNotEqualTo(null);
+        assertThat(foundComments).isEqualTo(new HashSet<Comment>());
+        assertThat(foundComments).isEmpty();
+    }
 }
