@@ -1,12 +1,16 @@
 package odimash.openforum.domain.repository;
 
 import odimash.openforum.domain.entity.User;
+import odimash.openforum.domain.entity.Role;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import jakarta.transaction.Transactional;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -63,5 +67,17 @@ class UserRepositoryTest {
         userRepository.delete(user);
         Optional<User> foundUser = userRepository.findById(user.getId());
         assertThat(foundUser).isNotPresent();
+    }
+
+    @Test
+    void testFindRolesById() {
+        User user = new User();
+        user.setUsername("Test user");
+        user.setRoles(new HashSet<Role>());
+        userRepository.save(user);
+
+        Set<Role> roles = userRepository.findRolesById(user.getId());
+
+        assertThat(roles).isEmpty();
     }
 }
