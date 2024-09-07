@@ -2,6 +2,8 @@ package odimash.openforum.domain.repository;
 
 import odimash.openforum.domain.entity.Rights;
 import odimash.openforum.domain.entity.Role;
+import odimash.openforum.domain.entity.User;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,6 +23,9 @@ class RoleRepositoryTest {
 
     @Autowired
     private RoleRepository roleRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @Test
     void testSaveAndFindById() {
@@ -68,5 +73,30 @@ class RoleRepositoryTest {
         Optional<Role> foundRole = roleRepository.findByRightsIn(new ArrayList<Rights>(rights));
         assertThat(foundRole).isPresent();
         assertThat(foundRole.get().getName()).isEqualTo(role.getName());
+    }
+
+    @Test
+    void testFindUsersById() {
+        User user1 = new User(null, "user1", null, null, null);
+        User user2 = new User(null, "user2", null, null, null);
+
+        user1 = userRepository.save(user1);
+        user2 = userRepository.save(user2);
+
+        Set<User> users = new HashSet<>();
+        users.add(user1);
+        users.add(user2);
+        Role role = new Role(null, "test Role", null, users, null);
+
+        role = roleRepository.save(role);
+
+        Optional<Role> optionalRole = roleRepository.findById(role.getId());
+        assertThat(optionalRole).isPresent();
+
+        Role foundRole = optionalRole.get();
+        Set<User> foundUsers = foundRole.getUsers();
+
+        assertThat(foundUsers).isEqualTo(users);
+
     }
 }

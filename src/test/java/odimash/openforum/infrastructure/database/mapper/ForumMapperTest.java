@@ -1,4 +1,4 @@
-package odimash.openforum.database.mapper;
+package odimash.openforum.infrastructure.database.mapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -14,16 +14,13 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import odimash.openforum.domain.entity.Forum;
 import odimash.openforum.domain.repository.ForumRepository;
 import odimash.openforum.exception.EntityNotFoundByIdException;
 import odimash.openforum.infrastructure.database.dto.ForumDTO;
-import odimash.openforum.infrastructure.database.mapper.ForumMapper;
 
 
-@SpringBootTest
 public class ForumMapperTest {
 
     @Mock

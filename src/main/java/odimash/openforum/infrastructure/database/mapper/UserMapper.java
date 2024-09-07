@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import odimash.openforum.domain.entity.User;
-import odimash.openforum.domain.repository.RoleRepository;
 import odimash.openforum.domain.repository.UserRepository;
 import odimash.openforum.infrastructure.database.dto.UserDTO;
 
@@ -24,8 +23,8 @@ public class UserMapper {
 			userDTO.getUsername(),
 			userDTO.getEmail(),
 			userDTO.getPassword(),
-			// userRepository.findRolesById(userDTO.getId());
-			null
+			userDTO.getId() == null ?
+				null : userRepository.findRolesById(userDTO.getId())
 		);
 	}
 

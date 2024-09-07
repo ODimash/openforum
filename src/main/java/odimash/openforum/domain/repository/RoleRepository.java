@@ -11,4 +11,7 @@ import java.util.Optional;
 public interface RoleRepository extends JpaRepository<Role, Long> {
     Optional<Role> findByName(String name);
     Optional<Role> findByRightsIn(List<Rights> rights);
+
+    // @Query("SELECT r.users FROM Role r WHERE r.id = :id")
+    // Set<User> findUsersById(@Param("id") Long id);
 }

@@ -16,7 +16,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import odimash.openforum.domain.entity.Comment;
 import odimash.openforum.domain.entity.Forum;
@@ -27,7 +26,6 @@ import odimash.openforum.exception.EntityNotFoundByIdException;
 import odimash.openforum.infrastructure.database.dto.TopicDTO;
 import odimash.openforum.infrastructure.database.mapper.TopicMapper;
 
-@SpringBootTest
 public class TopicServiceTest {
 
 	@Mock
