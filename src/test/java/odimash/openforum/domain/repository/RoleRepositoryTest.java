@@ -1,24 +1,24 @@
 package odimash.openforum.domain.repository;
 
-import odimash.openforum.domain.entity.Rights;
 import odimash.openforum.domain.entity.Role;
+import odimash.openforum.domain.entity.Rights;
 import odimash.openforum.domain.entity.User;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
 
-import jakarta.transaction.Transactional;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
-@Transactional
+@DataJpaTest
+@ActiveProfiles("test")
 class RoleRepositoryTest {
 
     @Autowired
@@ -27,50 +27,48 @@ class RoleRepositoryTest {
     @Autowired
     private UserRepository userRepository;
 
-    @Test
-    void testSaveAndFindById() {
-        Role role = new Role();
-        role.setName("ROLE_ADMIN");
-        roleRepository.save(role);
+    Role role;
 
+    @BeforeEach
+    public void setUp() {
+        role = new Role();
+        role.setName("Test Role");
+    }
+
+    @Test
+    void testFindById() {
+        roleRepository.save(role);
         Optional<Role> foundRole = roleRepository.findById(role.getId());
         assertThat(foundRole).isPresent();
-        assertThat(foundRole.get().getName()).isEqualTo("ROLE_ADMIN");
+        assertThat(foundRole.get().getName()).isEqualTo(role.getName());
     }
 
     @Test
     void testFindByName() {
-        Role role = new Role();
-        role.setName("ROLE_USER");
         roleRepository.save(role);
-
-        Optional<Role> foundRole = roleRepository.findByName("ROLE_USER");
+        Optional<Role> foundRole = roleRepository.findByName(role.getName());
         assertThat(foundRole).isPresent();
-        assertThat(foundRole.get().getName()).isEqualTo("ROLE_USER");
+        assertThat(foundRole.get().getName()).isEqualTo(role.getName());
     }
 
     @Test
     void testDelete() {
-        Role role = new Role();
-        role.setName("ROLE_MODERATOR");
         roleRepository.save(role);
+        Optional<Role> foundRole = roleRepository.findById(role.getId());
+        assertThat(foundRole).isPresent();
 
         roleRepository.delete(role);
-        Optional<Role> foundRole = roleRepository.findById(role.getId());
+        foundRole = roleRepository.findById(role.getId());
         assertThat(foundRole).isNotPresent();
     }
 
     @Test
     void testFindByRightsIn() {
-        Role role = new Role();
-        role.setName("ROLE_WITH_RIGHTS");
-        Set<Rights> rights = new HashSet<Rights>();
-        rights.add(Rights.createCategory);
-        rights.add(Rights.writeCommentAnywhere);
+        Set<Rights> rights = Set.of(Rights.createCategory, Rights.writeCommentAnywhere);
         role.setRights(rights);
         roleRepository.save(role);
 
-        Optional<Role> foundRole = roleRepository.findByRightsIn(new ArrayList<Rights>(rights));
+        Optional<Role> foundRole = roleRepository.findByRightsIn(List.copyOf(rights));
         assertThat(foundRole).isPresent();
         assertThat(foundRole.get().getName()).isEqualTo(role.getName());
     }
@@ -83,11 +81,8 @@ class RoleRepositoryTest {
         user1 = userRepository.save(user1);
         user2 = userRepository.save(user2);
 
-        Set<User> users = new HashSet<>();
-        users.add(user1);
-        users.add(user2);
-        Role role = new Role(null, "test Role", null, users, null);
-
+        Set<User> users = Set.of(user1, user2);
+        role.setUsers(users);
         role = roleRepository.save(role);
 
         Optional<Role> optionalRole = roleRepository.findById(role.getId());
@@ -97,6 +92,5 @@ class RoleRepositoryTest {
         Set<User> foundUsers = foundRole.getUsers();
 
         assertThat(foundUsers).isEqualTo(users);
-
     }
 }

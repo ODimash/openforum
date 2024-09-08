@@ -58,12 +58,16 @@ public class CommentServiceTest {
 
         CommentDTO result = commentService.getCommentById(1L);
         assertThat(result).isEqualTo(commentDTO);
+        verify(commentRepository, times(1)).findById(1L);
+        verify(commentMapper, times(1)).mapToDTO(comment);
     }
 
     @Test
     public void testGetCommentById_NotFound() {
         when(commentRepository.findById(1L)).thenReturn(Optional.empty());
+
         assertThrows(EntityNotFoundByIdException.class, () -> commentService.getCommentById(1L));
+        verify(commentRepository, times(1)).findById(1L);
     }
 
     @Test
@@ -74,6 +78,8 @@ public class CommentServiceTest {
 
         Set<CommentDTO> result = commentService.getCommentsByTopicId(1L);
         assertThat(result).contains(commentDTO);
+        verify(commentRepository, times(1)).findByTopicId(1L);
+        verify(commentMapper, times(1)).mapToDTO(comment);
     }
 
     @Test
@@ -84,6 +90,9 @@ public class CommentServiceTest {
 
         CommentDTO result = commentService.createComment(commentDTO);
         assertThat(result).isEqualTo(commentDTO);
+        verify(commentMapper, times(1)).mapToEntity(commentDTO);
+        verify(commentRepository, times(1)).save(comment);
+        verify(commentMapper, times(1)).mapToDTO(comment);
     }
 
     @Test
@@ -92,13 +101,16 @@ public class CommentServiceTest {
         doNothing().when(commentRepository).deleteById(1L);
 
         commentService.deleteComment(1L);
+        verify(commentRepository, times(1)).existsById(1L);
         verify(commentRepository, times(1)).deleteById(1L);
     }
 
     @Test
     public void testDeleteComment_NotFound() {
         when(commentRepository.existsById(1L)).thenReturn(false);
+
         assertThrows(EntityNotFoundByIdException.class, () -> commentService.deleteComment(1L));
+        verify(commentRepository, times(1)).existsById(1L);
     }
 
     @Test
@@ -111,12 +123,17 @@ public class CommentServiceTest {
 
         CommentDTO result = commentService.editComment(1L, newContent);
         assertThat(result.getContent()).isEqualTo(newContent);
+        verify(commentRepository, times(1)).findById(1L);
+        verify(commentRepository, times(1)).save(comment);
+        verify(commentMapper, times(1)).mapToDTO(comment);
     }
 
     @Test
     public void testEditComment_NotFound() {
         String newContent = "Updated content";
         when(commentRepository.findById(1L)).thenReturn(Optional.empty());
+
         assertThrows(EntityNotFoundByIdException.class, () -> commentService.editComment(1L, newContent));
+        verify(commentRepository, times(1)).findById(1L);
     }
 }

@@ -16,25 +16,22 @@ public class ForumMapper {
     private ForumRepository forumRepository;
 
     public ForumDTO mapToDTO(Forum forum) {
-        ForumDTO forumDTO = new ForumDTO();
-        forumDTO.setId(forum.getId());
-        forumDTO.setName(forum.getName());
-        forumDTO.setParentForumId(forum.getParentForum() != null ? forum.getParentForum().getId() : null);
-        return forumDTO;
+        return forum == null ? null : new ForumDTO(
+            forum.getId(),
+            forum.getName(),
+            forum.getParentForum() == null ? null : forum.getParentForum().getId()
+        );
     }
 
     public Forum mapToEntity(ForumDTO forumDTO) {
-        Forum forum = new Forum();
-
-        forum.setId(forumDTO.getId());
-        forum.setName(forumDTO.getName());
-
-        forum.setParentForum(forumDTO.getParentForumId() == null ?
-            null : forumRepository.findById(forumDTO.getParentForumId())
-                    .orElseThrow(() -> new EntityNotFoundByIdException(Forum.class, forumDTO.getParentForumId())));
-
-        forum.setSubCategories(forumRepository.findSubCategoriesById(forumDTO.getId()));
-
-        return forum;
+        return forumDTO == null ? null : new Forum(
+            forumDTO.getId(),
+            forumDTO.getName(),
+            forumDTO.getParentForumId() == null ? null : forumRepository.findById(forumDTO.getParentForumId())
+                    .orElseThrow(() -> new EntityNotFoundByIdException(Forum.class, forumDTO.getParentForumId())),
+            forumRepository.findSubCategoriesById(forumDTO.getId()),
+            forumDTO.getId() == null ? null : forumRepository.findById(forumDTO.getId())
+                    .orElseThrow(() -> new EntityNotFoundByIdException(Forum.class, forumDTO.getId())).getTopics()
+        );
     }
 }

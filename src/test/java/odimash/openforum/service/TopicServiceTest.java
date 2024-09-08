@@ -53,32 +53,26 @@ public class TopicServiceTest {
 		topicDTO = new TopicDTO(1L, "Test topic", 1L,"test content", 1L);
 
 		forum.setTopics(List.of(topic));
-
+		when(topicRepository.save(topic)).thenReturn(topic);
+		when(topicMapper.mapToDTO(topic)).thenReturn(topicDTO);
+		when(topicMapper.mapToEntity(topicDTO)).thenReturn(topic);
+		when(topicRepository.findById(topicDTO.getId())).thenReturn(Optional.of(topic));
 	}
 
 
 	@Test
 	public void testCreateTopic_Success() {
-		when(topicMapper.mapToEntity(topicDTO)).thenReturn(topic);
-		when(topicMapper.mapToDTO(topic)).thenReturn(topicDTO);
-		when(topicRepository.save(topic)).thenReturn(topic);
 		assertThat(topicService.createTopic(topicDTO)).isEqualTo(topicDTO);
 	}
 
 	@Test
 	public void testUpdateTopic_Success() {
-		when(topicRepository.findById(topicDTO.getId())).thenReturn(Optional.of(topic));
-		when(topicMapper.mapToEntity(topicDTO)).thenReturn(topic);
-		when(topicRepository.save(topic)).thenReturn(topic);
-		when(topicMapper.mapToDTO(topic)).thenReturn(topicDTO);
-
 		TopicDTO updatedTopicDTO = topicService.updateTopic(topicDTO);
 		assertThat(updatedTopicDTO).isEqualTo(topicDTO);
 	}
 
 	@Test
 	public void testUpdateTopic_ShouldReturnThrowException_WhenIdIsNull() {
-
 		topicDTO.setId(null);
 
 		Exception thrown = assertThrows(
@@ -87,13 +81,10 @@ public class TopicServiceTest {
 		);
 
 		assertThat(thrown.getMessage()).isEqualTo("ID from TopicDTO is null");
-
 	}
 
 	@Test
 	public void testUpdateTopic_ShouldReturnThrowException_WhenEntityNotFoundById() {
-
-		when(topicMapper.mapToEntity(topicDTO)).thenReturn(topic);
 		when(topicRepository.findById(topicDTO.getId())).thenReturn(Optional.empty());
 
 		Exception thrown = assertThrows(
@@ -101,15 +92,11 @@ public class TopicServiceTest {
 			() -> topicService.updateTopic(topicDTO)
 		);
 
-		assertThat(thrown.getMessage()).isEqualTo(
-			String.format("Not found \"%s\" by ID %s", Topic.class.getSimpleName(), topicDTO.getId().toString())
-		);
+		assertThat(thrown.getMessage()).isEqualTo("Not found \"Topic\" by ID 1");
 	}
 
 	@Test
 	public void testReadTopic_Success() {
-		when(topicRepository.findById(topicDTO.getId())).thenReturn(Optional.of(topic));
-		when(topicMapper.mapToDTO(topic)).thenReturn(topicDTO);
 		TopicDTO foundTopicDTO = topicService.readTopic(topicDTO.getId());
 		assertThat(foundTopicDTO).isEqualTo(topicDTO);
 	}
@@ -135,9 +122,7 @@ public class TopicServiceTest {
 			() -> topicService.readTopic(topic.getId())
 		);
 
-		assertThat(thrown.getMessage()).isEqualTo(
-			String.format("Not found \"%s\" by ID %s", Topic.class.getSimpleName(), topic.getId().toString())
-		);
+		assertThat(thrown.getMessage()).isEqualTo("Not found \"Topic\" by ID 1");
 	}
 
 	@Test
@@ -154,7 +139,7 @@ public class TopicServiceTest {
 			IllegalArgumentException.class,
 			() -> topicService.deleteTopic(null)
 		);
-		assertThat(thrown.getMessage()).isEqualTo("ID for delete topic can not be null");
+		assertThat(thrown.getMessage()).isEqualTo("ID for delete topic cannot be null");
 	}
 
 }

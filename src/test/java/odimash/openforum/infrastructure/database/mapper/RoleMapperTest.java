@@ -67,7 +67,6 @@ public class RoleMapperTest {
 
 	@Test
 	public void testMapToEntity_WhenRoleNotFound() {
-		when(forumRepository.findById(roleDTO.getControlledForumId())).thenReturn(Optional.of(forum));
 		when(roleRepository.findById(roleDTO.getId())).thenReturn(Optional.empty());
 		assertThrows(EntityNotFoundByIdException.class, () -> roleMapper.mapToEntity(roleDTO));
 	}

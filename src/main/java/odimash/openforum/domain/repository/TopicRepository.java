@@ -11,5 +11,5 @@ import java.util.Optional;
 @Repository
 public interface TopicRepository extends JpaRepository<Topic, Long> {
     Set<Topic> findByForum(Forum forum);
-    Optional<Topic> findByName(String name);
+    Optional<Topic> findByTitle(String name);
 }

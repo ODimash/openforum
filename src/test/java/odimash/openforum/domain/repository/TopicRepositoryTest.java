@@ -1,14 +1,14 @@
 package odimash.openforum.domain.repository;
 
-import odimash.openforum.domain.entity.*;
-
+import odimash.openforum.domain.entity.Forum;
+import odimash.openforum.domain.entity.Topic;
+import odimash.openforum.domain.entity.User;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import jakarta.transaction.Transactional;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -16,8 +16,8 @@ import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
-@Transactional
+@DataJpaTest
+@ActiveProfiles("test")
 class TopicRepositoryTest {
 
     @Autowired
@@ -45,7 +45,7 @@ class TopicRepositoryTest {
         userRepository.save(author);
 
         topic = new Topic();
-        topic.setName("Test Topic");
+        topic.setTitle("Test Topic");
         topic.setForum(forum);
         topic.setAuthor(author);
         topic.setComments(new HashSet<>());
@@ -54,16 +54,14 @@ class TopicRepositoryTest {
 
     @AfterEach
     void tearDown() {
-        topicRepository.deleteAll();
-        userRepository.deleteAll();
         forumRepository.deleteAll();
     }
 
     @Test
     void testFindByName() {
-        Optional<Topic> foundTopic = topicRepository.findByName("Test Topic");
+        Optional<Topic> foundTopic = topicRepository.findByTitle("Test Topic");
         assertThat(foundTopic).isPresent();
-        assertThat(foundTopic.get().getName()).isEqualTo("Test Topic");
+        assertThat(foundTopic.get().getTitle()).isEqualTo("Test Topic");
     }
 
     @Test

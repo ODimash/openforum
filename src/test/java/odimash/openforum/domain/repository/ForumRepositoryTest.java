@@ -1,23 +1,38 @@
 package odimash.openforum.domain.repository;
 
 import odimash.openforum.domain.entity.Forum;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import jakarta.transaction.Transactional;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
-@Transactional
+@DataJpaTest
+@ActiveProfiles("test")
 class ForumRepositoryTest {
 
     @Autowired
     private ForumRepository forumRepository;
+
+    private Forum parentForum;
+    private Forum childForum;
+
+    @BeforeEach
+    void setUp() {
+        parentForum = new Forum();
+        parentForum.setName("Parent Forum");
+        forumRepository.save(parentForum);
+
+        childForum = new Forum();
+        childForum.setName("Child Forum");
+        childForum.setParentForum(parentForum);
+        forumRepository.save(childForum);
+    }
 
     @Test
     void testSaveAndFindById() {
@@ -32,26 +47,13 @@ class ForumRepositoryTest {
 
     @Test
     void testFindByName() {
-        Forum forum = new Forum();
-        forum.setName("Specific Name");
-        forumRepository.save(forum);
-
-        Optional<Forum> foundForum = forumRepository.findByName("Specific Name");
+        Optional<Forum> foundForum = forumRepository.findByName("Parent Forum");
         assertThat(foundForum).isPresent();
-        assertThat(foundForum.get().getName()).isEqualTo("Specific Name");
+        assertThat(foundForum.get().getName()).isEqualTo("Parent Forum");
     }
 
     @Test
     void testFindSubCategoriesById() {
-        Forum parentForum = new Forum();
-        parentForum.setName("Parent Forum");
-        forumRepository.save(parentForum);
-
-        Forum childForum = new Forum();
-        childForum.setName("Child Forum");
-        childForum.setParentForum(parentForum);
-        forumRepository.save(childForum);
-
         List<Forum> subCategories = forumRepository.findSubCategoriesById(parentForum.getId());
 
         assertThat(subCategories).hasSize(1);
@@ -60,52 +62,31 @@ class ForumRepositoryTest {
 
     @Test
     void testFindByNameAndParentForum() {
-        Forum parentForum = new Forum();
-        parentForum.setName("Parent Forum");
-        forumRepository.save(parentForum);
+        Optional<Forum> foundForum = forumRepository.findByNameAndParentForumId(childForum.getName(), parentForum.getId());
 
-        Forum expectedChildForum = new Forum();
-        expectedChildForum.setName("Child Forum");
-        expectedChildForum.setParentForum(parentForum);
-        forumRepository.save(expectedChildForum);
-
-        Forum otherChildForum = new Forum();
-        otherChildForum.setName("Child Forum");
-        forumRepository.save(otherChildForum);
-
-        Optional<Forum> foundForum = forumRepository.findByNameAndParentForum(expectedChildForum.getName(), parentForum);
-
-        assertThat(foundForum.get()).isEqualTo(expectedChildForum);
+        assertThat(foundForum).isPresent();
+        assertThat(foundForum.get()).isEqualTo(childForum);
     }
 
     @Test
     void testFindByNameAndParentId() {
-        Forum parentForum = new Forum();
-        parentForum.setName("Parent Forum");
-        forumRepository.save(parentForum);
+        Optional<Forum> foundForum = forumRepository.findByNameAndParentForumId(childForum.getName(), parentForum.getId());
 
-        Forum expectedChildForum = new Forum();
-        expectedChildForum.setName("Child Forum");
-        expectedChildForum.setParentForum(parentForum);
-        forumRepository.save(expectedChildForum);
-
-        Forum otherChildForum = new Forum();
-        otherChildForum.setName("Child Forum");
-        forumRepository.save(otherChildForum);
-
-        Optional<Forum> foundForum = forumRepository.findByNameAndParentForumId(expectedChildForum.getName(), parentForum.getId());
-
-        assertThat(foundForum.get()).isEqualTo(expectedChildForum);
+        assertThat(foundForum).isPresent();
+        assertThat(foundForum.get()).isEqualTo(childForum);
     }
 
     @Test
     void testDelete() {
-        Forum forum = new Forum();
-        forum.setName("To be deleted");
-        forumRepository.save(forum);
-
-        forumRepository.delete(forum);
-        Optional<Forum> foundForum = forumRepository.findById(forum.getId());
+        forumRepository.delete(childForum);
+        Optional<Forum> foundForum = forumRepository.findById(childForum.getId());
         assertThat(foundForum).isNotPresent();
     }
+
+    @Test
+    void testFindByNonExistentId() {
+        Optional<Forum> foundForum = forumRepository.findById(-1L);
+        assertThat(foundForum).isNotPresent();
+    }
+
 }

@@ -21,7 +21,7 @@ public class CommentMapper {
     private TopicRepository topicRepository;
 
     public CommentDTO mapToDTO(Comment comment) {
-        return new CommentDTO(
+        return comment == null ? null : new CommentDTO(
             comment.getId(),
             comment.getAuthor() == null ? null : comment.getAuthor().getId(),
             comment.getTopic() == null ? null : comment.getTopic().getId(),
@@ -30,7 +30,7 @@ public class CommentMapper {
     }
 
     public Comment mapToEntity(CommentDTO commentDTO) {
-        return new Comment(
+        return commentDTO == null ? null : new Comment(
             commentDTO.getId(),
             commentDTO.getAuthorId() == null ? null : userRepository.findById(commentDTO.getAuthorId())
                 .orElseThrow(() -> new EntityNotFoundByIdException(User.class, commentDTO.getAuthorId())),

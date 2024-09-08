@@ -7,7 +7,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class TopicDTO {
 	private Long id;
-	private String name;
+	private String title;
 	private Long forumId;
 	private String content;
 	private Long authorId;

@@ -26,9 +26,9 @@ public class TopicMapper {
 
 
 	public TopicDTO mapToDTO(Topic topic) {
-		return new TopicDTO(
+		return topic == null ? null : new TopicDTO(
 			topic.getId(),
-			topic.getName(),
+			topic.getTitle(),
 			topic.getForum() == null ? null : topic.getForum().getId(),
 			topic.getContent(),
 			topic.getAuthor() == null ? null : topic.getAuthor().getId()
@@ -36,9 +36,9 @@ public class TopicMapper {
 	}
 
 	public Topic mapToEntity(TopicDTO topicDTO) {
-		return new Topic(
+		return topicDTO == null ? null : new Topic(
 			topicDTO.getId(),
-			topicDTO.getName(),
+			topicDTO.getTitle(),
 
 			topicDTO.getForumId() == null ? null :
 				forumRepository.findById(topicDTO.getForumId())

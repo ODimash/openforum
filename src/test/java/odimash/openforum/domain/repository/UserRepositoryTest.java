@@ -1,83 +1,81 @@
 package odimash.openforum.domain.repository;
 
-import odimash.openforum.domain.entity.User;
 import odimash.openforum.domain.entity.Role;
+import odimash.openforum.domain.entity.User;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
 
-import jakarta.transaction.Transactional;
-
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Optional;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
-@Transactional
+@DataJpaTest
+@ActiveProfiles("test")
 class UserRepositoryTest {
 
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepository;
+
+    @Autowired
+    RoleRepository roleRepository;
+
+    User user;
+
+    @BeforeEach
+    public void setUp() {
+        user = new User(null, "Test user", "test@example.com", "password", null);
+    }
 
     @Test
-    void testSaveAndFindById() {
-        User user = new User();
-        user.setUsername("testuser");
-        user.setEmail("test@example.com");
-        user.setPassword("password");
+    void testFindById() {
         userRepository.save(user);
-
         Optional<User> foundUser = userRepository.findById(user.getId());
         assertThat(foundUser).isPresent();
-        assertThat(foundUser.get().getUsername()).isEqualTo("testuser");
+        assertThat(foundUser.get().getUsername()).isEqualTo("Test user");
     }
 
     @Test
     void testFindByUsername() {
-        User user = new User();
-        user.setUsername("uniqueUsername");
         userRepository.save(user);
-
-        Optional<User> foundUser = userRepository.findByUsername("uniqueUsername");
+        Optional<User> foundUser = userRepository.findByUsername(user.getUsername());
         assertThat(foundUser).isPresent();
-        assertThat(foundUser.get().getUsername()).isEqualTo("uniqueUsername");
+        assertThat(foundUser.get().getUsername()).isEqualTo(user.getUsername());
     }
 
     @Test
     void testFindByEmail() {
-        User user = new User();
-        user.setUsername("testName");
-        user.setEmail("testEmail");
+        userRepository.save(user);
+        Optional<User> foundUser = userRepository.findByEmail(user.getEmail());
+        assertThat(foundUser).isPresent();
+        assertThat(foundUser.get().getEmail()).isEqualTo(user.getEmail());
+    }
+
+    @Test
+    void testFindRolesById() {
+        Role role = new Role(null, "Test Role", null, null, null);
+        roleRepository.save(role);
+
+        user.setRoles(Set.of(role));
         userRepository.save(user);
 
-        Optional<User> foundUser = userRepository.findByEmail("testEmail");
-        assertThat(foundUser).isPresent();
-        assertThat(foundUser.get().getEmail()).isEqualTo("testEmail");
+        Set<Role> roles = userRepository.findRolesById(user.getId());
+        Optional<Role> foundRole = roleRepository.findById(role.getId());
+
+        assertThat(foundRole).isNotEmpty();
+        assertThat(roles).contains(role);
     }
 
     @Test
     void testDelete() {
-        User user = new User();
-        user.setUsername("tobedeleted");
         userRepository.save(user);
-
         userRepository.delete(user);
         Optional<User> foundUser = userRepository.findById(user.getId());
         assertThat(foundUser).isNotPresent();
     }
 
-    @Test
-    void testFindRolesById() {
-        User user = new User();
-        user.setUsername("Test user");
-        user.setRoles(new HashSet<Role>());
-        userRepository.save(user);
-
-        Set<Role> roles = userRepository.findRolesById(user.getId());
-
-        assertThat(roles).isEmpty();
-    }
 }

@@ -14,7 +14,7 @@ public class UserMapper {
 	UserRepository userRepository;
 
 	public UserDTO mapToDTO(User user) {
-		return new UserDTO(user.getId(), user.getUsername(), user.getEmail(), user.getPassword());
+		return user == null ? null : new UserDTO(user.getId(), user.getUsername(), user.getEmail(), user.getPassword());
 	}
 
 	public User mapToEntity(UserDTO userDTO) {

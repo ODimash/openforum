@@ -6,7 +6,6 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -38,10 +37,11 @@ public class ForumMapperTest {
         MockitoAnnotations.openMocks(this);
         parentForum = new Forum(1L, "Test parent forum", null, null, null);
         forum = new Forum(2L, "Test forum", parentForum, null, null);
-        parentForum.setSubCategories(List.of(forum));
-
         forumDTO = new ForumDTO(2L, "Test forum", parentForum.getId());
-        new RuntimeException("Executing setUp");
+
+        when(forumRepository.findById(1L)).thenReturn(Optional.of(parentForum));
+        when(forumRepository.findById(2L)).thenReturn(Optional.of(forum));
+        when(forumRepository.findSubCategoriesById(2L)).thenReturn(null);
     }
 
     @Test
@@ -51,10 +51,7 @@ public class ForumMapperTest {
 
     @Test
     public void testMapToEntity_Success() {
-        when(forumRepository.findById(1L)).thenReturn(Optional.of(parentForum));
-        when(forumRepository.findSubCategoriesById(2L)).thenReturn(null);
         Forum result = forumMapper.mapToEntity(forumDTO);
-
         assertThat(result).isEqualTo(forum);
     }
 

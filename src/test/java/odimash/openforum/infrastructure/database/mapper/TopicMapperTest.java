@@ -54,9 +54,7 @@ public class TopicMapperTest {
 
 	@Test
 	public void testMapToTopicEntity_Success() {
-
 		when(commentRepository.findByTopicId(1L)).thenReturn(comments);
-
 		Topic convertedTopic = topicMapper.mapToEntity(topicDTO);
 		assertThat(convertedTopic).isEqualTo(topic);
 	}

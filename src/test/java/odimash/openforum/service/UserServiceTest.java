@@ -105,7 +105,7 @@ public class UserServiceTest {
 	@Test
 	public void testReadUser_WhenIdNull() {
 		Exception thrown = assertThrows(IllegalArgumentException.class, () -> userService.readUser(null));
-		assertThat(thrown.getMessage()).isEqualTo("User ID can not be null for read");
+		assertThat(thrown.getMessage()).isEqualTo("User ID cannot be null for read");
 	}
 
 	@Test
@@ -126,7 +126,7 @@ public class UserServiceTest {
 	public void testUpdateUser_WhenIdNull() {
 		userDTO.setId(null);
 		Exception thrown = assertThrows(IllegalArgumentException.class, () -> userService.updateUser(userDTO));
-		assertThat(thrown.getMessage()).isEqualTo("User ID can not be null for update");
+		assertThat(thrown.getMessage()).isEqualTo("User ID cannot be null for update");
 	}
 
 	@Test
@@ -149,7 +149,7 @@ public class UserServiceTest {
 		doThrow(IllegalArgumentException.class).when(userRepository).deleteById(userDTO.getId());
 
 		Exception thrown = assertThrows(IllegalArgumentException.class, () -> userService.deleteUser(userDTO.getId()));
-		assertThat(thrown.getMessage()).isEqualTo("User ID can not be null for delete");
+		assertThat(thrown.getMessage()).isEqualTo("User ID cannot be null for delete");
 		verify(userRepository, never()).deleteById(userDTO.getId());
 	}
 

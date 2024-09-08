@@ -9,52 +9,70 @@ import odimash.openforum.domain.repository.TopicRepository;
 import odimash.openforum.exception.EntityNotFoundByIdException;
 import odimash.openforum.infrastructure.database.dto.TopicDTO;
 import odimash.openforum.infrastructure.database.mapper.TopicMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 @Data
 public class TopicService {
 
-	@Autowired
-	private TopicRepository topicRepository;
+  private static final Logger logger = LoggerFactory.getLogger(TopicService.class);
 
-	@Autowired
-	private TopicMapper topicMapper;
+  @Autowired
+  private TopicRepository topicRepository;
 
-	public TopicDTO createTopic(TopicDTO topicDTO) {
-		Topic savedTopic = topicRepository.save(topicMapper.mapToEntity(topicDTO));
-		return topicMapper.mapToDTO(savedTopic);
-	}
+  @Autowired
+  private TopicMapper topicMapper;
 
-	public TopicDTO readTopic(Long id) {
-		if (id == null) {
-			throw new IllegalArgumentException("ID for search topic is null");
-		}
+  public TopicDTO createTopic(TopicDTO topicDTO) {
+    logger.info("Creating topic with title: {}", topicDTO.getTitle());
+    Topic savedTopic = topicRepository.save(topicMapper.mapToEntity(topicDTO));
+    logger.info("Topic created with ID: {}", savedTopic.getId());
+    return topicMapper.mapToDTO(savedTopic);
+  }
 
-		return topicMapper.mapToDTO(
-			topicRepository.findById(id)
-				.orElseThrow(() -> new EntityNotFoundByIdException(Topic.class, id))
-		);
-	}
+  public TopicDTO readTopic(Long id) {
+    if (id == null) {
+      logger.error("ID for search topic is null");
+      throw new IllegalArgumentException("ID for search topic is null");
+    }
 
-	public TopicDTO updateTopic(TopicDTO topicDTOtoUpdate) {
-		if (topicDTOtoUpdate.getId() == null)  {
-			throw new IllegalArgumentException("ID from TopicDTO is null");
-		}
+    logger.info("Reading topic with ID: {}", id);
+    return topicMapper.mapToDTO(
+      topicRepository.findById(id)
+        .orElseThrow(() -> {
+          logger.error("Topic with ID '{}' not found", id);
+          return new EntityNotFoundByIdException(Topic.class, id);
+        })
+    );
+  }
 
-		if (topicRepository.findById(topicDTOtoUpdate.getId()).isEmpty()) {
-			throw new EntityNotFoundByIdException(Topic.class, topicDTOtoUpdate.getId());
-		}
+  public TopicDTO updateTopic(TopicDTO topicDTOtoUpdate) {
+    if (topicDTOtoUpdate.getId() == null)  {
+      logger.error("ID from TopicDTO is null");
+      throw new IllegalArgumentException("ID from TopicDTO is null");
+    }
 
-		Topic topicToUpdate = topicMapper.mapToEntity(topicDTOtoUpdate);
-		return topicMapper.mapToDTO(topicRepository.save(topicToUpdate));
-	}
+    logger.info("Updating topic with ID: {}", topicDTOtoUpdate.getId());
+    if (topicRepository.findById(topicDTOtoUpdate.getId()).isEmpty()) {
+      logger.error("Topic with ID '{}' not found", topicDTOtoUpdate.getId());
+      throw new EntityNotFoundByIdException(Topic.class, topicDTOtoUpdate.getId());
+    }
 
-	public void deleteTopic(Long id) {
-		if (id == null) {
-			throw new IllegalArgumentException("ID for delete topic can not be null");
-		}
+    Topic topicToUpdate = topicMapper.mapToEntity(topicDTOtoUpdate);
+    Topic updatedTopic = topicRepository.save(topicToUpdate);
+    logger.info("Topic updated with ID: {}", updatedTopic.getId());
+    return topicMapper.mapToDTO(updatedTopic);
+  }
 
-		topicRepository.deleteById(id);
-	}
+  public void deleteTopic(Long id) {
+    if (id == null) {
+      logger.error("ID for delete topic cannot be null");
+      throw new IllegalArgumentException("ID for delete topic cannot be null");
+    }
+
+    logger.info("Deleting topic with ID: {}", id);
+    topicRepository.deleteById(id);
+  }
 
 }

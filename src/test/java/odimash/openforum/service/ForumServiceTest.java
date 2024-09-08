@@ -99,7 +99,7 @@ public class ForumServiceTest {
             () -> forumService.updateForum(forumDTO)
         );
 
-        assertThat(thrown.getMessage()).isEqualTo("Forum ID can not be null for update");
+        assertThat(thrown.getMessage()).isEqualTo("Forum ID cannot be null for update");
     }
 
     @Test
@@ -158,7 +158,7 @@ public class ForumServiceTest {
         when(forumMapper.mapToDTO(forum2)).thenReturn(forumDTO2);
         when(forumMapper.mapToDTO(forum3)).thenReturn(forumDTO3);
 
-        List<String> result = forumService.getPathAString(forumId);
+        List<String> result = forumService.getPathAsString(forumId);
         assertThat(result).containsExactly("Forum 1", "Forum 2", "Forum 3");
 
         verify(forumRepository, times(1)).findById(forumId);
@@ -173,7 +173,7 @@ public class ForumServiceTest {
 
         when(forumRepository.findById(anyLong())).thenReturn(Optional.empty());
 
-        assertThatThrownBy(() -> forumService.getPathAString(forumId))
+        assertThatThrownBy(() -> forumService.getPathAsString(forumId))
                 .isInstanceOf(EntityNotFoundByIdException.class)
                 .hasMessageContaining(String.format("Not found \"%s\" by ID %s", Forum.class.getSimpleName(), forumId.toString()));
 

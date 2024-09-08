@@ -77,7 +77,7 @@ public class RoleServiceTest {
             IllegalArgumentException.class,
             () -> roleService.updateRole(roleDTO));
 
-        assertThat(thrown.getMessage()).isEqualTo("Role ID can not be null");
+        assertThat(thrown.getMessage()).isEqualTo("Role ID cannot be null");
     }
 
     @Test
@@ -104,7 +104,7 @@ public class RoleServiceTest {
             IllegalArgumentException.class,
             () -> roleService.readRole(null));
 
-        assertThat(thrown.getMessage()).isEqualTo("Role ID can not be null");
+        assertThat(thrown.getMessage()).isEqualTo("Role ID cannot be null");
     }
 
     @Test
@@ -132,7 +132,7 @@ public class RoleServiceTest {
             IllegalArgumentException.class,
             () -> roleService.deleteRole(roleDTO.getId()));
 
-        assertThat(thrown.getMessage()).isEqualTo("Role ID can not be null");
+        assertThat(thrown.getMessage()).isEqualTo("Role ID cannot be null");
         verify(roleRepository, never()).deleteById(anyLong());
     }
 }

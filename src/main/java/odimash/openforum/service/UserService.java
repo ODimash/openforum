@@ -11,63 +11,85 @@ import odimash.openforum.exception.EntityNotFoundByIdException;
 import odimash.openforum.exception.WrongPasswordFormatException;
 import odimash.openforum.infrastructure.database.dto.UserDTO;
 import odimash.openforum.infrastructure.database.mapper.UserMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class UserService {
 
-	@Autowired
-	UserRepository userRepository;
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
-	@Autowired
-	UserMapper userMapper;
+    @Autowired
+    private UserRepository userRepository;
 
-	public UserDTO createUser(UserDTO userDTO) {
-		try {
-			checkDataCorrectness(userDTO);
-		} catch (Exception e) {
-			throw e;
-		}
+    @Autowired
+    private UserMapper userMapper;
 
-		User savedUser = userRepository.save(userMapper.mapToEntity(userDTO));
-		return userMapper.mapToDTO(savedUser);
+    public UserDTO createUser(UserDTO userDTO) {
+        verifyDataCorrectness(userDTO);
 
-	}
+        logger.info("Creating user with username: {}", userDTO.getUsername());
+        User savedUser = userRepository.save(userMapper.mapToEntity(userDTO));
+        logger.info("User created with ID: {}", savedUser.getId());
+        return userMapper.mapToDTO(savedUser);
+    }
 
-	public UserDTO readUser(Long id) {
-		if (id == null)
-			throw new IllegalArgumentException("User ID can not be null for read");
+    public UserDTO readUser(Long id) {
+        if (id == null) {
+            logger.error("User ID cannot be null for read");
+            throw new IllegalArgumentException("User ID cannot be null for read");
+        }
 
-		User foundUser = userRepository.findById(id).orElseThrow(
-			() -> new EntityNotFoundByIdException(User.class, id));
+        logger.info("Reading user with ID: {}", id);
+        User foundUser = userRepository.findById(id)
+            .orElseThrow(() -> {
+                logger.error("User with ID '{}' not found", id);
+                return new EntityNotFoundByIdException(User.class, id);
+            });
 
-		return userMapper.mapToDTO(foundUser);
-	}
+        return userMapper.mapToDTO(foundUser);
+    }
 
-	public UserDTO updateUser(UserDTO userDTO) {
-		if (userDTO.getId() == null)
-			throw new IllegalArgumentException("User ID can not be null for update");
+    public UserDTO updateUser(UserDTO userDTO) {
+        if (userDTO.getId() == null) {
+            logger.error("User ID cannot be null for update");
+            throw new IllegalArgumentException("User ID cannot be null for update");
+        }
 
-		userRepository.findById(userDTO.getId()).orElseThrow(() -> new EntityNotFoundByIdException(User.class, userDTO.getId()));
+        logger.info("Updating user with ID: {}", userDTO.getId());
+        userRepository.findById(userDTO.getId())
+            .orElseThrow(() -> {
+                logger.error("User with ID '{}' not found", userDTO.getId());
+                return new EntityNotFoundByIdException(User.class, userDTO.getId());
+            });
 
-		User updatedUser = userRepository.save(userMapper.mapToEntity(userDTO));
-		return userMapper.mapToDTO(updatedUser);
+        User updatedUser = userRepository.save(userMapper.mapToEntity(userDTO));
+        logger.info("User updated with ID: {}", updatedUser.getId());
+        return userMapper.mapToDTO(updatedUser);
+    }
 
-	}
+    public void deleteUser(Long id) {
+        if (id == null) {
+            logger.error("User ID cannot be null for delete");
+            throw new IllegalArgumentException("User ID cannot be null for delete");
+        }
 
-	public void deleteUser(Long id) {
-		if (id == null)
-			throw new IllegalArgumentException("User ID can not be null for delete");
+        logger.info("Deleting user with ID: {}", id);
+        userRepository.deleteById(id);
+    }
 
-		userRepository.deleteById(id);
-	}
-
-	private void checkDataCorrectness(UserDTO userDTO) {
-		if (userRepository.findByUsername(userDTO.getUsername()).isPresent())
-			throw new EntityNameIsAlreadyTakenException(User.class, userDTO.getUsername());
-		if (userRepository.findByEmail(userDTO.getEmail()).isPresent())
-			throw new EmailAlreadyUsedException(userDTO.getEmail());
-		if (userDTO.getPassword().length() < 6)
-			throw new WrongPasswordFormatException();
-	}
-
+    private void verifyDataCorrectness(UserDTO userDTO) {
+        if (userRepository.findByUsername(userDTO.getUsername()).isPresent()) {
+            logger.error("Username '{}' is already taken", userDTO.getUsername());
+            throw new EntityNameIsAlreadyTakenException(User.class, userDTO.getUsername());
+        }
+        if (userRepository.findByEmail(userDTO.getEmail()).isPresent()) {
+            logger.error("Email '{}' is already used", userDTO.getEmail());
+            throw new EmailAlreadyUsedException(userDTO.getEmail());
+        }
+        if (userDTO.getPassword().length() < 6) {
+            logger.error("Password format is incorrect, it should be at least 6 characters long");
+            throw new WrongPasswordFormatException();
+        }
+    }
 }

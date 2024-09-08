@@ -25,7 +25,7 @@ public class RoleMapper {
 	UserRepository userRepository;
 
 	public RoleDTO mapToDTO(Role role) {
-		return new RoleDTO(
+		return role == null ? null : new RoleDTO(
 			role.getId(),
 			role.getName(),
 			role.getControlledForum() == null ? null : role.getControlledForum().getId(),
@@ -34,7 +34,7 @@ public class RoleMapper {
 	}
 
 	public Role mapToEntity(RoleDTO roleDTO) {
-		return new Role(
+		return roleDTO == null ? null : new Role(
 			roleDTO.getId(),
 			roleDTO.getName(),
 			roleDTO.getControlledForumId() == null ?
