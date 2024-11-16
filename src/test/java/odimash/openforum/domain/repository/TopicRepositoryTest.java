@@ -11,8 +11,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -65,8 +65,8 @@ class TopicRepositoryTest {
     }
 
     @Test
-    void testFindByForum() {
-        Set<Topic> foundTopics = topicRepository.findByForum(forum);
+    void testFindByForumId() {
+        List<Topic> foundTopics = topicRepository.findByForumId(forum.getId());
         assertThat(foundTopics).isNotEmpty();
         assertThat(foundTopics.iterator().next().getForum().getId()).isEqualTo(forum.getId());
     }

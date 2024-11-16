@@ -8,7 +8,14 @@ import odimash.openforum.domain.entity.Topic;
 import odimash.openforum.domain.repository.TopicRepository;
 import odimash.openforum.exception.EntityNotFoundByIdException;
 import odimash.openforum.infrastructure.database.dto.TopicDTO;
+import odimash.openforum.infrastructure.database.dto.UserDTO;
 import odimash.openforum.infrastructure.database.mapper.TopicMapper;
+import odimash.openforum.infrastructure.viewdata.CommentViewData;
+import odimash.openforum.infrastructure.viewdata.TopicViewData;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +27,12 @@ public class TopicService {
 
   @Autowired
   private TopicRepository topicRepository;
+
+  @Autowired
+  private UserService userService;
+
+  @Autowired
+  private CommentService commentService;
 
   @Autowired
   private TopicMapper topicMapper;
@@ -45,6 +58,11 @@ public class TopicService {
           return new EntityNotFoundByIdException(Topic.class, id);
         })
     );
+  }
+
+  public List<TopicDTO> getTopicListByForum(Long forumId) {
+    return topicRepository.findByForumId(forumId).stream()
+          .map(topicMapper::mapToDTO).collect(Collectors.toList());
   }
 
   public TopicDTO updateTopic(TopicDTO topicDTOtoUpdate) {
@@ -74,5 +92,13 @@ public class TopicService {
     logger.info("Deleting topic with ID: {}", id);
     topicRepository.deleteById(id);
   }
+
+public TopicViewData getTopicViewData(Long id) {
+  TopicDTO topicDTO = this.readTopic(id);
+  UserDTO authorDTO = userService.readUser(topicDTO.getAuthorId());
+  List<CommentViewData> commentViewDataList = commentService.getCommentViewDataByTopicId(topicDTO.getId());
+  TopicViewData topicViewData = new TopicViewData(topicDTO, authorDTO, commentViewDataList);
+  return topicViewData;
+}
 
 }

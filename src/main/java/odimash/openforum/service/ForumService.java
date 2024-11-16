@@ -3,6 +3,7 @@ package odimash.openforum.service;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,8 @@ import odimash.openforum.exception.EntityNameIsAlreadyTakenException;
 import odimash.openforum.exception.EntityNotFoundByIdException;
 import odimash.openforum.infrastructure.database.dto.ForumDTO;
 import odimash.openforum.infrastructure.database.mapper.ForumMapper;
+import odimash.openforum.infrastructure.viewdata.ForumViewData;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +26,9 @@ public class ForumService {
 
     @Autowired
     private ForumRepository forumRepository;
+
+    @Autowired
+    private TopicService topicService;
 
     @Autowired
     private ForumMapper forumMapper;
@@ -91,5 +97,20 @@ public class ForumService {
         }
         Collections.reverse(path);
         return path;
+    }
+
+    public List<ForumDTO> getSubCategoriesDTO(Long id) {
+        List<Forum> foundSubCategoryes = forumRepository.findSubCategoriesById(id);
+        List<ForumDTO> foundSubCategoryesDTO = foundSubCategoryes.stream().map(forumMapper::mapToDTO).collect(Collectors.toList());
+        return foundSubCategoryesDTO;
+    }
+
+    public ForumViewData getForumViewData(Long id) {
+        return id == null ? null : new ForumViewData(
+            this.readForumById(id),
+            this.getSubCategoriesDTO(id),
+            topicService.getTopicListByForum(id),
+            this.getPathAsString(id)
+        );
     }
 }

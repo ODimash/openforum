@@ -1,9 +1,12 @@
 package odimash.openforum.infrastructure.database.mapper;
 
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import odimash.openforum.domain.entity.User;
+import odimash.openforum.domain.repository.RoleRepository;
 import odimash.openforum.domain.repository.UserRepository;
 import odimash.openforum.infrastructure.database.dto.UserDTO;
 
@@ -11,7 +14,10 @@ import odimash.openforum.infrastructure.database.dto.UserDTO;
 public class UserMapper {
 
 	@Autowired
-	UserRepository userRepository;
+	private UserRepository userRepository;
+
+	@Autowired
+	private RoleRepository roleRepository;
 
 	public UserDTO mapToDTO(User user) {
 		return user == null ? null : new UserDTO(user.getId(), user.getUsername(), user.getEmail(), user.getPassword());
@@ -24,7 +30,7 @@ public class UserMapper {
 			userDTO.getEmail(),
 			userDTO.getPassword(),
 			userDTO.getId() == null ?
-				null : userRepository.findRolesById(userDTO.getId())
+				Set.of(roleRepository.findById(1L).get()) : userRepository.findRolesById(userDTO.getId())
 		);
 	}
 

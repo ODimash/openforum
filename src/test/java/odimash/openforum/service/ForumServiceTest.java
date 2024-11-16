@@ -223,4 +223,27 @@ public class ForumServiceTest {
         verify(forumMapper, never()).mapToDTO(any(Forum.class));
     }
 
+    @Test
+    public void testGetSubCategoryesDTO() {
+
+        Forum forum1 = new Forum(1L, "Forum 1", null, null, null);
+        Forum forum2 = new Forum(2L, "Forum 2", forum1, null, null);
+        Forum forum3 = new Forum(3L, "Forum 3", forum1, null, null);
+        forum1.setSubCategories(List.of(forum2, forum3));
+
+        ForumDTO forum2DTO = new ForumDTO(forum2.getId(), forum2.getName(), 1L);
+        ForumDTO forum3DTO = new ForumDTO(forum3.getId(), forum3.getName(), 1L);
+
+        when(forumRepository.findById(forum1.getId())).thenReturn(Optional.of(forum1));
+        when(forumRepository.findSubCategoriesById(forum1.getId())).thenReturn(List.of(forum2, forum3));
+
+        // Настройка мока маппера
+        when(forumMapper.mapToDTO(forum2)).thenReturn(forum2DTO);
+        when(forumMapper.mapToDTO(forum3)).thenReturn(forum3DTO);
+
+        List<ForumDTO> foundSubCategoryesDTO = forumService.getSubCategoriesDTO(forum1.getId());
+        assertThat(foundSubCategoryesDTO).contains(forum2DTO, forum3DTO);
+
+    }
+
 }

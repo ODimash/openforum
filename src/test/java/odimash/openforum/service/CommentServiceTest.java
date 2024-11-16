@@ -19,6 +19,7 @@ import odimash.openforum.infrastructure.database.mapper.CommentMapper;
 import odimash.openforum.exception.EntityNotFoundByIdException;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -76,7 +77,7 @@ public class CommentServiceTest {
         when(commentRepository.findByTopicId(1L)).thenReturn(comments);
         when(commentMapper.mapToDTO(comment)).thenReturn(commentDTO);
 
-        Set<CommentDTO> result = commentService.getCommentsByTopicId(1L);
+        List<CommentDTO> result = commentService.getCommentsByTopicId(1L);
         assertThat(result).contains(commentDTO);
         verify(commentRepository, times(1)).findByTopicId(1L);
         verify(commentMapper, times(1)).mapToDTO(comment);

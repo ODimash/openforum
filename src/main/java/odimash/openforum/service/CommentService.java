@@ -10,7 +10,10 @@ import odimash.openforum.domain.repository.CommentRepository;
 import odimash.openforum.exception.EntityNotFoundByIdException;
 import odimash.openforum.infrastructure.database.dto.CommentDTO;
 import odimash.openforum.infrastructure.database.mapper.CommentMapper;
+import odimash.openforum.infrastructure.viewdata.CommentViewData;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -25,6 +28,9 @@ public class CommentService {
     @Autowired
     private CommentMapper commentMapper;
 
+    @Autowired
+    private UserService userService;
+
     public CommentDTO getCommentById(Long id) {
         logger.info("Fetching comment with ID: {}", id);
         Comment comment = commentRepository.findById(id)
@@ -35,10 +41,10 @@ public class CommentService {
         return commentMapper.mapToDTO(comment);
     }
 
-    public Set<CommentDTO> getCommentsByTopicId(Long topicId) {
+    public List<CommentDTO> getCommentsByTopicId(Long topicId) {
         logger.info("Fetching comments for topic ID: {}", topicId);
         Set<Comment> comments = commentRepository.findByTopicId(topicId);
-        return comments.stream().map(commentMapper::mapToDTO).collect(Collectors.toSet());
+        return comments.stream().map(commentMapper::mapToDTO).collect(Collectors.toList());
     }
 
     public CommentDTO createComment(CommentDTO commentDTO) {
@@ -70,5 +76,19 @@ public class CommentService {
         }
         commentRepository.deleteById(id);
         logger.info("Deleted comment with ID: {}", id);
+    }
+
+    public List<CommentViewData> getCommentViewDataByTopicId(Long topicId) {
+        List<CommentDTO> commentDTOList = getCommentsByTopicId(topicId);
+        return mapCommentDTOtoCommentViewData(commentDTOList);
+    }
+
+    private List<CommentViewData> mapCommentDTOtoCommentViewData(List<CommentDTO> commentDTOList) {
+        List<CommentViewData> commentViewDataList = new ArrayList<>();
+        for (var commentDTO : commentDTOList) {
+            var authorDTO = userService.readUser(commentDTO.getAuthorId());
+            commentViewDataList.add(new CommentViewData(commentDTO, authorDTO));
+        }
+        return commentViewDataList;
     }
 }

@@ -17,7 +17,7 @@ public class Topic {
     private String title;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "forum_id", nullable = false)
+    @JoinColumn(name = "forum_id", nullable = true)
     private Forum forum;
 
     private String content;

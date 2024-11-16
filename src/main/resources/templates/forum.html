@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${forum.name}">Forum Name</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="${forum.name}">Forum Name</h1>
+
+        <div class="subCategoryes">
+            <h2>Subcategories</h2>
+            <ul>
+                <li th:each="subCategory : ${subcategories}">
+                    <a th:href="@{/forum/{id}(id=${subCategory.id})}" th:text="${subCategory.name}">SubCategory Name</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="topics">
+            <h2>Topics</h2>
+            <ul>
+                <li th:each="topic : ${topics}">
+                    <a th:href="@{/topic/{id}(id=${topic.id})}" th:text="${topic.name}">Topic Name</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Button and Form for creating new subcategory -->
+        <button class="toggle-form" data-target="#createCategoryForm">Create New Subcategory</button>
+        <div id="createCategoryForm" class="form-container hidden">
+            <form th:action="@{/forum/categories}" method="post">
+                <input type="text" name="name" placeholder="Subcategory Name" required>
+                <input type="hidden" name="parentId" th:value="${forum.id}">
+                <button type="submit">Create</button>
+            </form>
+        </div>
+
+        <!-- Button and Form for creating new topic -->
+        <button class="toggle-form" data-target="#createTopicForm">Create New Topic</button>
+        <div id="createTopicForm" class="form-container hidden">
+            <form th:action="@{/topics}" method="post">
+                <input type="text" name="name" placeholder="Topic Name" required>
+                <input type="hidden" name="forumId" th:value="${forum.id}">
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+
+    <script th:src="@{/scripts.js}" src="../static/js/scripts.js" type="text/javascript"></script>
+</body>
+</html>
