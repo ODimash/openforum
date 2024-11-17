@@ -29,7 +29,7 @@ public class UserMapperTest {
 	public void setUp() {
 		MockitoAnnotations.openMocks(this);
 		user = new User(1L, "test user", null, null, null);
-		userDTO = new UserDTO(1L, "test user", null, null);
+		userDTO = new UserDTO(1L, "test user", null, null, null);
 	}
 
 	@Test

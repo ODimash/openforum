@@ -44,7 +44,7 @@ public class UserServiceTest {
 	public void setUp() {
 		MockitoAnnotations.openMocks(this);
 		user = new User(1L, "test user", "email", "password", null);
-		userDTO = new UserDTO(1L, "test user", "email", "password");
+		userDTO = new UserDTO(1L, "test user", "email", "password", null);
 
 		when(userMapper.mapToDTO(user)).thenReturn(userDTO);
 		when(userMapper.mapToEntity(userDTO)).thenReturn(user);

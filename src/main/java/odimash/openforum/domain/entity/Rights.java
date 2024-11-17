@@ -15,5 +15,4 @@ public enum Rights {
 
 	hideAndShowTopic,
 	hideAndShowCategory;
-
 }

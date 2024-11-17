@@ -1,8 +1,7 @@
 package odimash.openforum.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+// import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import odimash.openforum.domain.entity.User;
@@ -28,15 +27,14 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    @Autowired
-    @Lazy
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    // @Autowired
+    // private PasswordEncoder passwordEncoder;
 
     public UserDTO createUser(UserDTO userDTO) {
         verifyDataCorrectness(userDTO);
 
         logger.info("Creating user with username: {}", userDTO.getUsername());
-        userDTO.setPassword(bCryptPasswordEncoder.encode(userDTO.getPassword()));
+        userDTO.setPassword(userDTO.getPassword());
         User savedUser = userRepository.save(userMapper.mapToEntity(userDTO));
         logger.info("User created with ID: {}", savedUser.getId());
         return userMapper.mapToDTO(savedUser);

@@ -1,0 +1,1048 @@
+2024-11-17 19:50:43 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 19:50:43 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 19:50:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 19:50:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 5 JPA repository interfaces.
+2024-11-17 19:50:44 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 19:50:44 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 19:50:44 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 19:50:44 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 19:50:44 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1114 ms
+2024-11-17 19:50:44 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 19:50:44 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 19:50:44 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 19:50:44 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-38 - Starting...
+2024-11-17 19:50:44 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-38 - Added connection org.postgresql.jdbc.PgConnection@b520f02
+2024-11-17 19:50:44 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-38 - Start completed.
+2024-11-17 19:50:44 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 19:50:45 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 19:50:45 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 19:50:45 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 19:50:45 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 19:50:45 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 19:50:45 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 19:50:45 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.66 seconds (process running for 15444.978)
+2024-11-17 19:50:45 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-17 19:50:59 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-17 19:50:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 19:50:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-38 - Shutdown initiated...
+2024-11-17 19:50:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-38 - Shutdown completed.
+2024-11-17 19:51:00 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 19:51:00 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 19:51:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 19:51:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 5 JPA repository interfaces.
+2024-11-17 19:51:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 19:51:01 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 19:51:01 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 19:51:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 19:51:01 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 989 ms
+2024-11-17 19:51:01 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 19:51:01 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 19:51:01 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 19:51:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-39 - Starting...
+2024-11-17 19:51:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-39 - Added connection org.postgresql.jdbc.PgConnection@7a864667
+2024-11-17 19:51:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-39 - Start completed.
+2024-11-17 19:51:01 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 19:51:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 19:51:02 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 19:51:02 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 19:51:02 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 19:51:02 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 19:51:02 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 19:51:02 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.481 seconds (process running for 15461.722)
+2024-11-17 19:51:02 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-17 19:59:31 INFO  o.o.OpenForumApplicationTests - Starting OpenForumApplicationTests using Java 21.0.4 with PID 9264 (started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 19:59:31 INFO  o.o.OpenForumApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 19:59:33 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 19:59:33 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 140 ms. Found 5 JPA repository interfaces.
+2024-11-17 19:59:35 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 19:59:35 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-17 19:59:36 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 19:59:37 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 19:59:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-11-17 19:59:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d8f2eec
+2024-11-17 19:59:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-11-17 19:59:40 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 19:59:40 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 19:59:41 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-17 19:59:43 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 19:59:43 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 19:59:43 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 19:59:45 INFO  o.o.OpenForumApplicationTests - Started OpenForumApplicationTests in 14.431 seconds (process running for 17.016)
+2024-11-17 19:59:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 19:59:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-11-17 19:59:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-11-17 20:00:56 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 44 class path changes (0 additions, 44 deletions, 0 modifications)
+2024-11-17 20:00:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:00:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-39 - Shutdown initiated...
+2024-11-17 20:00:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-39 - Shutdown completed.
+2024-11-17 20:00:56 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:00:56 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:00:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:00:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-11-17 20:00:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:00:58 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:00:58 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:00:58 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:00:58 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1461 ms
+2024-11-17 20:00:58 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:00:58 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:00:58 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:00:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Starting...
+2024-11-17 20:00:58 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-40 - Added connection org.postgresql.jdbc.PgConnection@71660d3e
+2024-11-17 20:00:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Start completed.
+2024-11-17 20:00:58 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:00:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:00:58 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:00:58 WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 274581b7-ab48-4ff0-895e-c2eebc8db81e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-11-17 20:00:58 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-11-17 20:00:59 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:00:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:00:59 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.542 seconds (process running for 16058.374)
+2024-11-17 20:00:59 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-11-17 20:01:03 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 44 class path changes (44 additions, 0 deletions, 0 modifications)
+2024-11-17 20:01:03 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:01:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Shutdown initiated...
+2024-11-17 20:01:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Shutdown completed.
+2024-11-17 20:01:03 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:01:03 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:01:03 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:01:03 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:01:04 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:01:04 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:01:04 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:01:04 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:01:04 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 929 ms
+2024-11-17 20:01:04 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:01:04 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:01:04 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:01:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-41 - Starting...
+2024-11-17 20:01:04 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-41 - Added connection org.postgresql.jdbc.PgConnection@92c67a3
+2024-11-17 20:01:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-41 - Start completed.
+2024-11-17 20:01:04 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:01:04 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:01:05 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:01:05 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:01:05 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:01:05 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:01:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:01:06 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.843 seconds (process running for 16065.27)
+2024-11-17 20:01:06 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsService and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+         - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-11-17 20:01:12 INFO  o.o.d.r.CommentRepositoryTest - Starting CommentRepositoryTest using Java 21.0.4 with PID 560 (started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:01:12 INFO  o.o.d.r.CommentRepositoryTest - The following 1 profile is active: "test"
+2024-11-17 20:01:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:01:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 104 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:01:13 INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2024-11-17 20:01:13 INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:e7e8e24a-ca62-4454-88e0-c4ae3e51f3a8;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-11-17 20:01:14 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:01:14 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-17 20:01:14 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:01:15 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:01:15 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-17 20:01:17 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:01:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:01:18 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-17 20:01:19 INFO  o.o.d.r.CommentRepositoryTest - Started CommentRepositoryTest in 8.578 seconds (process running for 11.227)
+2024-11-17 20:01:21 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.ForumRepositoryTest]: ForumRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:01:21 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.ForumRepositoryTest
+2024-11-17 20:01:21 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.RoleRepositoryTest]: RoleRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:01:21 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.RoleRepositoryTest
+2024-11-17 20:01:21 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.TopicRepositoryTest]: TopicRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:01:21 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.TopicRepositoryTest
+2024-11-17 20:01:22 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:01:22 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.UserRepositoryTest
+2024-11-17 20:01:24 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.OpenForumApplicationTests]: OpenForumApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:01:24 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.OpenForumApplicationTests
+2024-11-17 20:01:24 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-11-17 20:01:24 INFO  o.o.OpenForumApplicationTests - Starting OpenForumApplicationTests using Java 21.0.4 with PID 560 (started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:01:24 INFO  o.o.OpenForumApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:01:26 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:01:26 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:01:27 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:01:27 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:01:27 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:01:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-11-17 20:01:28 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42985121
+2024-11-17 20:01:28 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-11-17 20:01:28 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:01:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:01:29 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:01:29 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:01:29 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:01:31 INFO  o.o.OpenForumApplicationTests - Started OpenForumApplicationTests in 7.212 seconds (process running for 23.379)
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Editing comment with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Updated comment with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Fetching comment with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Fetching comment with ID: 1
+2024-11-17 20:01:32 ERROR o.openforum.service.CommentService - Comment with ID '1' not found
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Deleting comment with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Deleted comment with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Creating a new comment for topic ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Created new comment with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Fetching comments for topic ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Deleting comment with ID: 1
+2024-11-17 20:01:32 ERROR o.openforum.service.CommentService - Comment with ID '1' not found
+2024-11-17 20:01:32 INFO  o.openforum.service.CommentService - Editing comment with ID: 1
+2024-11-17 20:01:32 ERROR o.openforum.service.CommentService - Comment with ID '1' not found
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 3
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 3
+2024-11-17 20:01:32 ERROR o.openforum.service.ForumService - Forum ID cannot be null for update
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Forum updated with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Deleting forum with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 2
+2024-11-17 20:01:32 ERROR o.openforum.service.ForumService - Forum with ID '2' not found
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Reading forum with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Creating forum with name: Test forum
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Forum created with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 1
+2024-11-17 20:01:32 ERROR o.openforum.service.ForumService - Forum with ID '1' not found
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Creating forum with name: Test forum
+2024-11-17 20:01:32 ERROR o.openforum.service.ForumService - Forum with name 'Test forum' already exists
+2024-11-17 20:01:32 INFO  o.openforum.service.ForumService - Reading forum with ID: 1
+2024-11-17 20:01:32 ERROR o.openforum.service.ForumService - Forum with ID '1' not found
+2024-11-17 20:01:32 INFO  o.openforum.service.RoleService - Updating role with ID: 1
+2024-11-17 20:01:32 ERROR o.openforum.service.RoleService - Role with ID '1' not found
+2024-11-17 20:01:32 ERROR o.openforum.service.RoleService - Role ID cannot be null
+2024-11-17 20:01:32 ERROR o.openforum.service.RoleService - Role ID cannot be null
+2024-11-17 20:01:32 ERROR o.openforum.service.RoleService - Role name 'Admin' is already taken
+2024-11-17 20:01:32 INFO  o.openforum.service.RoleService - Creating role with name: Admin
+2024-11-17 20:01:32 INFO  o.openforum.service.RoleService - Role created with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.RoleService - Reading role with ID: 1
+2024-11-17 20:01:32 ERROR o.openforum.service.RoleService - Role with ID '1' not found
+2024-11-17 20:01:32 ERROR o.openforum.service.RoleService - Role ID cannot be null
+2024-11-17 20:01:32 INFO  o.openforum.service.RoleService - Deleting role with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.RoleService - Updating role with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.RoleService - Role updated with ID: 1
+2024-11-17 20:01:32 INFO  o.openforum.service.RoleService - Reading role with ID: 1
+2024-11-17 20:01:33 ERROR o.openforum.service.TopicService - ID for search topic is null
+2024-11-17 20:01:33 INFO  o.openforum.service.TopicService - Creating topic with title: Test topic
+2024-11-17 20:01:33 INFO  o.openforum.service.TopicService - Topic created with ID: 1
+2024-11-17 20:01:33 ERROR o.openforum.service.TopicService - ID from TopicDTO is null
+2024-11-17 20:01:33 INFO  o.openforum.service.TopicService - Updating topic with ID: 1
+2024-11-17 20:01:33 ERROR o.openforum.service.TopicService - Topic with ID '1' not found
+2024-11-17 20:01:33 INFO  o.openforum.service.TopicService - Deleting topic with ID: 1
+2024-11-17 20:01:33 INFO  o.openforum.service.TopicService - Updating topic with ID: 1
+2024-11-17 20:01:33 INFO  o.openforum.service.TopicService - Topic updated with ID: 1
+2024-11-17 20:01:33 ERROR o.openforum.service.TopicService - ID for delete topic cannot be null
+2024-11-17 20:01:33 INFO  o.openforum.service.TopicService - Reading topic with ID: 1
+2024-11-17 20:01:33 INFO  o.openforum.service.TopicService - Reading topic with ID: 1
+2024-11-17 20:01:33 ERROR o.openforum.service.TopicService - Topic with ID '1' not found
+2024-11-17 20:01:33 INFO  o.openforum.service.UserService - Deleting user with ID: 1
+2024-11-17 20:01:33 INFO  o.openforum.service.UserService - Reading user with ID: 1
+2024-11-17 20:01:33 ERROR o.openforum.service.UserService - User with ID '1' not found
+2024-11-17 20:01:33 ERROR o.openforum.service.UserService - Username 'test user' is already taken
+2024-11-17 20:01:33 INFO  o.openforum.service.UserService - Updating user with ID: 1
+2024-11-17 20:01:33 INFO  o.openforum.service.UserService - User updated with ID: 1
+2024-11-17 20:01:33 ERROR o.openforum.service.UserService - User ID cannot be null for delete
+2024-11-17 20:01:33 ERROR o.openforum.service.UserService - Email 'email' is already used
+2024-11-17 20:01:33 INFO  o.openforum.service.UserService - Reading user with ID: 1
+2024-11-17 20:01:33 INFO  o.openforum.service.UserService - Updating user with ID: 1
+2024-11-17 20:01:33 ERROR o.openforum.service.UserService - User with ID '1' not found
+2024-11-17 20:01:33 ERROR o.openforum.service.UserService - User ID cannot be null for read
+2024-11-17 20:01:33 ERROR o.openforum.service.UserService - User ID cannot be null for update
+2024-11-17 20:01:33 ERROR o.openforum.service.UserService - Password format is incorrect, it should be at least 6 characters long
+2024-11-17 20:01:33 INFO  o.openforum.service.UserService - Creating user with username: test user
+2024-11-17 20:01:33 INFO  o.openforum.service.UserService - User created with ID: 1
+2024-11-17 20:01:34 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:01:34 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:01:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-11-17 20:01:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-11-17 20:04:24 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-17 20:04:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:04:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-41 - Shutdown initiated...
+2024-11-17 20:04:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-41 - Shutdown completed.
+2024-11-17 20:04:24 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:04:24 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:04:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:04:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:04:25 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:04:25 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:04:25 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:04:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:04:25 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1071 ms
+2024-11-17 20:04:25 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:04:25 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:04:25 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:04:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-42 - Starting...
+2024-11-17 20:04:25 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-42 - Added connection org.postgresql.jdbc.PgConnection@1527ca76
+2024-11-17 20:04:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-42 - Start completed.
+2024-11-17 20:04:26 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:04:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:04:26 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:04:26 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:04:26 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:04:26 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:04:26 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:04:26 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.404 seconds (process running for 16266.11)
+2024-11-17 20:04:26 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-17 20:04:29 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-17 20:04:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:04:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-42 - Shutdown initiated...
+2024-11-17 20:04:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-42 - Shutdown completed.
+2024-11-17 20:04:29 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:04:29 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:04:30 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:04:30 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:04:30 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:04:30 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:04:30 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:04:30 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:04:30 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1055 ms
+2024-11-17 20:04:30 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:04:30 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:04:30 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:04:30 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-43 - Starting...
+2024-11-17 20:04:31 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-43 - Added connection org.postgresql.jdbc.PgConnection@161c63d1
+2024-11-17 20:04:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-43 - Start completed.
+2024-11-17 20:04:31 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:04:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:04:31 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:04:31 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:04:31 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:04:32 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:04:32 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:04:32 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.405 seconds (process running for 16271.244)
+2024-11-17 20:04:32 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-17 20:05:07 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-17 20:05:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:05:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-43 - Shutdown initiated...
+2024-11-17 20:05:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-43 - Shutdown completed.
+2024-11-17 20:05:07 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:05:07 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:05:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:05:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:05:08 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:05:08 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:05:08 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:05:08 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:05:08 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 852 ms
+2024-11-17 20:05:08 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:05:08 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:05:08 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:05:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-44 - Starting...
+2024-11-17 20:05:08 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-44 - Added connection org.postgresql.jdbc.PgConnection@7026791
+2024-11-17 20:05:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-44 - Start completed.
+2024-11-17 20:05:08 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:05:08 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:05:08 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:05:08 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:05:08 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:05:09 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:05:09 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:05:09 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.103 seconds (process running for 16308.461)
+2024-11-17 20:05:09 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-17 20:05:14 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-17 20:05:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:05:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-44 - Shutdown initiated...
+2024-11-17 20:05:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-44 - Shutdown completed.
+2024-11-17 20:05:15 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:05:15 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:05:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:05:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:05:16 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:05:16 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:05:16 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:05:16 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:05:16 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1045 ms
+2024-11-17 20:05:16 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:05:16 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:05:16 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:05:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-45 - Starting...
+2024-11-17 20:05:16 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-45 - Added connection org.postgresql.jdbc.PgConnection@1f31c691
+2024-11-17 20:05:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-45 - Start completed.
+2024-11-17 20:05:16 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:05:16 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:05:17 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:05:17 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:05:17 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:05:17 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:05:17 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:05:17 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.42 seconds (process running for 16316.625)
+2024-11-17 20:05:17 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-17 20:05:32 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 44 class path changes (0 additions, 44 deletions, 0 modifications)
+2024-11-17 20:05:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:05:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-45 - Shutdown initiated...
+2024-11-17 20:05:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-45 - Shutdown completed.
+2024-11-17 20:05:34 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:05:34 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:05:36 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:05:36 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-11-17 20:05:37 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:05:37 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:05:37 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:05:37 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:05:37 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2202 ms
+2024-11-17 20:05:37 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:05:37 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:05:37 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:05:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-46 - Starting...
+2024-11-17 20:05:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-46 - Added connection org.postgresql.jdbc.PgConnection@741c97aa
+2024-11-17 20:05:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-46 - Start completed.
+2024-11-17 20:05:37 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:05:37 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:05:37 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:05:39 WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e96ac0e2-8c1f-41d0-9638-1286875b5683
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-11-17 20:05:39 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-11-17 20:05:39 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:05:39 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:05:39 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 6.212 seconds (process running for 16338.962)
+2024-11-17 20:05:39 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-11-17 20:05:44 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 44 class path changes (44 additions, 0 deletions, 0 modifications)
+2024-11-17 20:05:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:05:44 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-46 - Shutdown initiated...
+2024-11-17 20:05:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-46 - Shutdown completed.
+2024-11-17 20:05:45 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:05:45 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:05:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:05:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 165 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:05:48 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:05:48 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:05:48 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:05:48 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:05:48 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2740 ms
+2024-11-17 20:05:48 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:05:48 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:05:48 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:05:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-47 - Starting...
+2024-11-17 20:05:48 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-47 - Added connection org.postgresql.jdbc.PgConnection@438b4b66
+2024-11-17 20:05:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-47 - Start completed.
+2024-11-17 20:05:48 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:05:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:05:49 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:05:50 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:05:50 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:05:51 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:05:51 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:05:51 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 6.301 seconds (process running for 16350.733)
+2024-11-17 20:05:51 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsService and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+         - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-11-17 20:05:57 INFO  o.o.d.r.CommentRepositoryTest - Starting CommentRepositoryTest using Java 21.0.4 with PID 17900 (started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:05:57 INFO  o.o.d.r.CommentRepositoryTest - The following 1 profile is active: "test"
+2024-11-17 20:05:59 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:06:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 272 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:06:00 INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2024-11-17 20:06:01 INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:8b9994ac-d26e-430b-b51f-2c4653be1d37;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-11-17 20:06:02 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:06:02 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-17 20:06:02 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:06:03 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:06:03 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-17 20:06:06 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:06:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:06:07 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-17 20:06:08 INFO  o.o.d.r.CommentRepositoryTest - Started CommentRepositoryTest in 11.542 seconds (process running for 14.758)
+2024-11-17 20:06:10 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.ForumRepositoryTest]: ForumRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:06:10 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.ForumRepositoryTest
+2024-11-17 20:06:10 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.RoleRepositoryTest]: RoleRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:06:10 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.RoleRepositoryTest
+2024-11-17 20:06:10 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.TopicRepositoryTest]: TopicRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:06:11 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.TopicRepositoryTest
+2024-11-17 20:06:11 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:06:11 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.UserRepositoryTest
+2024-11-17 20:06:13 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.OpenForumApplicationTests]: OpenForumApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:06:13 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.OpenForumApplicationTests
+2024-11-17 20:06:13 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-11-17 20:06:13 INFO  o.o.OpenForumApplicationTests - Starting OpenForumApplicationTests using Java 21.0.4 with PID 17900 (started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:06:13 INFO  o.o.OpenForumApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:06:14 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:06:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:06:16 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:06:16 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:06:16 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:06:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-11-17 20:06:16 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@510579b9
+2024-11-17 20:06:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-11-17 20:06:17 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:06:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:06:18 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:06:18 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:06:18 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:06:20 INFO  o.o.OpenForumApplicationTests - Started OpenForumApplicationTests in 7.554 seconds (process running for 26.984)
+2024-11-17 20:06:20 INFO  o.openforum.service.CommentService - Editing comment with ID: 1
+2024-11-17 20:06:20 INFO  o.openforum.service.CommentService - Updated comment with ID: 1
+2024-11-17 20:06:20 INFO  o.openforum.service.CommentService - Fetching comment with ID: 1
+2024-11-17 20:06:20 INFO  o.openforum.service.CommentService - Fetching comment with ID: 1
+2024-11-17 20:06:20 ERROR o.openforum.service.CommentService - Comment with ID '1' not found
+2024-11-17 20:06:20 INFO  o.openforum.service.CommentService - Deleting comment with ID: 1
+2024-11-17 20:06:20 INFO  o.openforum.service.CommentService - Deleted comment with ID: 1
+2024-11-17 20:06:20 INFO  o.openforum.service.CommentService - Creating a new comment for topic ID: 1
+2024-11-17 20:06:20 INFO  o.openforum.service.CommentService - Created new comment with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.CommentService - Fetching comments for topic ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.CommentService - Deleting comment with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.CommentService - Comment with ID '1' not found
+2024-11-17 20:06:21 INFO  o.openforum.service.CommentService - Editing comment with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.CommentService - Comment with ID '1' not found
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 3
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 3
+2024-11-17 20:06:21 ERROR o.openforum.service.ForumService - Forum ID cannot be null for update
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Forum updated with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Deleting forum with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 2
+2024-11-17 20:06:21 ERROR o.openforum.service.ForumService - Forum with ID '2' not found
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Reading forum with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Creating forum with name: Test forum
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Forum created with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.ForumService - Forum with ID '1' not found
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Creating forum with name: Test forum
+2024-11-17 20:06:21 ERROR o.openforum.service.ForumService - Forum with name 'Test forum' already exists
+2024-11-17 20:06:21 INFO  o.openforum.service.ForumService - Reading forum with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.ForumService - Forum with ID '1' not found
+2024-11-17 20:06:21 INFO  o.openforum.service.RoleService - Updating role with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.RoleService - Role with ID '1' not found
+2024-11-17 20:06:21 ERROR o.openforum.service.RoleService - Role ID cannot be null
+2024-11-17 20:06:21 ERROR o.openforum.service.RoleService - Role ID cannot be null
+2024-11-17 20:06:21 ERROR o.openforum.service.RoleService - Role name 'Admin' is already taken
+2024-11-17 20:06:21 INFO  o.openforum.service.RoleService - Creating role with name: Admin
+2024-11-17 20:06:21 INFO  o.openforum.service.RoleService - Role created with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.RoleService - Reading role with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.RoleService - Role with ID '1' not found
+2024-11-17 20:06:21 ERROR o.openforum.service.RoleService - Role ID cannot be null
+2024-11-17 20:06:21 INFO  o.openforum.service.RoleService - Deleting role with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.RoleService - Updating role with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.RoleService - Role updated with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.RoleService - Reading role with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.TopicService - ID for search topic is null
+2024-11-17 20:06:21 INFO  o.openforum.service.TopicService - Creating topic with title: Test topic
+2024-11-17 20:06:21 INFO  o.openforum.service.TopicService - Topic created with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.TopicService - ID from TopicDTO is null
+2024-11-17 20:06:21 INFO  o.openforum.service.TopicService - Updating topic with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.TopicService - Topic with ID '1' not found
+2024-11-17 20:06:21 INFO  o.openforum.service.TopicService - Deleting topic with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.TopicService - Updating topic with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.TopicService - Topic updated with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.TopicService - ID for delete topic cannot be null
+2024-11-17 20:06:21 INFO  o.openforum.service.TopicService - Reading topic with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.TopicService - Reading topic with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.TopicService - Topic with ID '1' not found
+2024-11-17 20:06:21 INFO  o.openforum.service.UserService - Deleting user with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.UserService - Reading user with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.UserService - User with ID '1' not found
+2024-11-17 20:06:21 ERROR o.openforum.service.UserService - Username 'test user' is already taken
+2024-11-17 20:06:21 INFO  o.openforum.service.UserService - Updating user with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.UserService - User updated with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.UserService - User ID cannot be null for delete
+2024-11-17 20:06:21 ERROR o.openforum.service.UserService - Email 'email' is already used
+2024-11-17 20:06:21 INFO  o.openforum.service.UserService - Reading user with ID: 1
+2024-11-17 20:06:21 INFO  o.openforum.service.UserService - Updating user with ID: 1
+2024-11-17 20:06:21 ERROR o.openforum.service.UserService - User with ID '1' not found
+2024-11-17 20:06:21 ERROR o.openforum.service.UserService - User ID cannot be null for read
+2024-11-17 20:06:21 ERROR o.openforum.service.UserService - User ID cannot be null for update
+2024-11-17 20:06:21 ERROR o.openforum.service.UserService - Password format is incorrect, it should be at least 6 characters long
+2024-11-17 20:06:21 INFO  o.openforum.service.UserService - Creating user with username: test user
+2024-11-17 20:06:21 INFO  o.openforum.service.UserService - User created with ID: 1
+2024-11-17 20:06:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:06:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:06:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-11-17 20:06:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-11-17 20:07:01 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-17 20:07:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:07:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-47 - Shutdown initiated...
+2024-11-17 20:07:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-47 - Shutdown completed.
+2024-11-17 20:07:01 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:07:01 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:07:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:07:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:07:02 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:07:02 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:07:02 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:07:02 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:07:02 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 894 ms
+2024-11-17 20:07:02 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:07:02 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:07:02 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:07:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-48 - Starting...
+2024-11-17 20:07:02 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-48 - Added connection org.postgresql.jdbc.PgConnection@6c6dbd20
+2024-11-17 20:07:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-48 - Start completed.
+2024-11-17 20:07:02 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:07:03 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:07:03 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:07:03 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:07:03 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:07:04 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:07:04 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:07:04 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.91 seconds (process running for 16423.511)
+2024-11-17 20:07:04 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-17 20:07:05 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-17 20:07:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:07:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-48 - Shutdown initiated...
+2024-11-17 20:07:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-48 - Shutdown completed.
+2024-11-17 20:07:05 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:07:05 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:07:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:07:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:07:06 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:07:06 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:07:06 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:07:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:07:06 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 869 ms
+2024-11-17 20:07:06 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:07:06 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:07:06 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:07:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-49 - Starting...
+2024-11-17 20:07:07 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-49 - Added connection org.postgresql.jdbc.PgConnection@5877b2f3
+2024-11-17 20:07:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-49 - Start completed.
+2024-11-17 20:07:07 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:07:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:07:07 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:07:07 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:07:07 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:07:07 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:07:07 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:07:07 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.068 seconds (process running for 16427.129)
+2024-11-17 20:07:07 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-17 20:07:27 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 44 class path changes (0 additions, 44 deletions, 0 modifications)
+2024-11-17 20:07:27 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:07:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-49 - Shutdown initiated...
+2024-11-17 20:07:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-49 - Shutdown completed.
+2024-11-17 20:07:27 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:07:27 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:07:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:07:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-11-17 20:07:28 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:07:28 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:07:28 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:07:28 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:07:28 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1465 ms
+2024-11-17 20:07:29 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:07:29 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:07:29 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:07:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-50 - Starting...
+2024-11-17 20:07:29 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-50 - Added connection org.postgresql.jdbc.PgConnection@4ce688c7
+2024-11-17 20:07:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-50 - Start completed.
+2024-11-17 20:07:29 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:07:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:07:29 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:07:29 WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d449b63a-b107-4d6d-a5da-6ce3da3335f5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-11-17 20:07:29 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-11-17 20:07:29 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:07:29 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:07:29 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 2.488 seconds (process running for 16449.089)
+2024-11-17 20:07:29 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-11-17 20:07:34 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 44 class path changes (44 additions, 0 deletions, 0 modifications)
+2024-11-17 20:07:34 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:07:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-50 - Shutdown initiated...
+2024-11-17 20:07:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-50 - Shutdown completed.
+2024-11-17 20:07:34 INFO  o.openforum.OpenForumApplication - Starting OpenForumApplication using Java 21.0.4 with PID 8836 (C:\Users\dimas\Desktop\openforum\target\classes started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:07:34 INFO  o.openforum.OpenForumApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:07:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:07:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:07:36 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-17 20:07:36 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-17 20:07:36 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-11-17 20:07:36 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-17 20:07:36 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1384 ms
+2024-11-17 20:07:36 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:07:36 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:07:36 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:07:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-51 - Starting...
+2024-11-17 20:07:36 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-51 - Added connection org.postgresql.jdbc.PgConnection@6f22263d
+2024-11-17 20:07:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-51 - Start completed.
+2024-11-17 20:07:36 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:07:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:07:37 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:07:37 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:07:37 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:07:38 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-17 20:07:38 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-17 20:07:38 INFO  o.openforum.OpenForumApplication - Started OpenForumApplication in 3.85 seconds (process running for 16457.681)
+2024-11-17 20:07:38 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsService and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+         - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-11-17 20:07:44 INFO  o.o.d.r.CommentRepositoryTest - Starting CommentRepositoryTest using Java 21.0.4 with PID 16732 (started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:07:44 INFO  o.o.d.r.CommentRepositoryTest - The following 1 profile is active: "test"
+2024-11-17 20:07:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:07:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:07:45 INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2024-11-17 20:07:46 INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:d3f1e07c-0fe6-45d1-8802-f9659b8b8206;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-11-17 20:07:46 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:07:47 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-17 20:07:47 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:07:47 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:07:47 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-17 20:07:50 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:07:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:07:51 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-17 20:07:52 INFO  o.o.d.r.CommentRepositoryTest - Started CommentRepositoryTest in 9.056 seconds (process running for 11.82)
+2024-11-17 20:07:53 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.ForumRepositoryTest]: ForumRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:07:53 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.ForumRepositoryTest
+2024-11-17 20:07:53 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.RoleRepositoryTest]: RoleRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:07:53 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.RoleRepositoryTest
+2024-11-17 20:07:54 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.TopicRepositoryTest]: TopicRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:07:54 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.TopicRepositoryTest
+2024-11-17 20:07:54 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.domain.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:07:54 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.domain.repository.UserRepositoryTest
+2024-11-17 20:07:56 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [odimash.openforum.OpenForumApplicationTests]: OpenForumApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-17 20:07:56 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration odimash.openforum.OpenForumApplication for test class odimash.openforum.OpenForumApplicationTests
+2024-11-17 20:07:56 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-11-17 20:07:56 INFO  o.o.OpenForumApplicationTests - Starting OpenForumApplicationTests using Java 21.0.4 with PID 16732 (started by dimas in C:\Users\dimas\Desktop\openforum)
+2024-11-17 20:07:56 INFO  o.o.OpenForumApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-11-17 20:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-17 20:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 5 JPA repository interfaces.
+2024-11-17 20:07:59 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-17 20:07:59 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-17 20:07:59 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-17 20:07:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-11-17 20:08:00 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@702f99a5
+2024-11-17 20:08:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-11-17 20:08:00 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-17 20:08:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:08:01 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-17 20:08:01 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-17 20:08:01 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-17 20:08:03 INFO  o.o.OpenForumApplicationTests - Started OpenForumApplicationTests in 6.882 seconds (process running for 23.171)
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Editing comment with ID: 1
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Updated comment with ID: 1
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Fetching comment with ID: 1
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Fetching comment with ID: 1
+2024-11-17 20:08:03 ERROR o.openforum.service.CommentService - Comment with ID '1' not found
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Deleting comment with ID: 1
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Deleted comment with ID: 1
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Creating a new comment for topic ID: 1
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Created new comment with ID: 1
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Fetching comments for topic ID: 1
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Deleting comment with ID: 1
+2024-11-17 20:08:03 ERROR o.openforum.service.CommentService - Comment with ID '1' not found
+2024-11-17 20:08:03 INFO  o.openforum.service.CommentService - Editing comment with ID: 1
+2024-11-17 20:08:03 ERROR o.openforum.service.CommentService - Comment with ID '1' not found
+2024-11-17 20:08:03 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 3
+2024-11-17 20:08:03 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 3
+2024-11-17 20:08:03 ERROR o.openforum.service.ForumService - Forum ID cannot be null for update
+2024-11-17 20:08:03 INFO  o.openforum.service.ForumService - Forum updated with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.ForumService - Deleting forum with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 2
+2024-11-17 20:08:04 ERROR o.openforum.service.ForumService - Forum with ID '2' not found
+2024-11-17 20:08:04 INFO  o.openforum.service.ForumService - Reading forum with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.ForumService - Creating forum with name: Test forum
+2024-11-17 20:08:04 INFO  o.openforum.service.ForumService - Forum created with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.ForumService - Getting path as DTO for forum with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.ForumService - Forum with ID '1' not found
+2024-11-17 20:08:04 INFO  o.openforum.service.ForumService - Creating forum with name: Test forum
+2024-11-17 20:08:04 ERROR o.openforum.service.ForumService - Forum with name 'Test forum' already exists
+2024-11-17 20:08:04 INFO  o.openforum.service.ForumService - Reading forum with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.ForumService - Forum with ID '1' not found
+2024-11-17 20:08:04 INFO  o.openforum.service.RoleService - Updating role with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.RoleService - Role with ID '1' not found
+2024-11-17 20:08:04 ERROR o.openforum.service.RoleService - Role ID cannot be null
+2024-11-17 20:08:04 ERROR o.openforum.service.RoleService - Role ID cannot be null
+2024-11-17 20:08:04 ERROR o.openforum.service.RoleService - Role name 'Admin' is already taken
+2024-11-17 20:08:04 INFO  o.openforum.service.RoleService - Creating role with name: Admin
+2024-11-17 20:08:04 INFO  o.openforum.service.RoleService - Role created with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.RoleService - Reading role with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.RoleService - Role with ID '1' not found
+2024-11-17 20:08:04 ERROR o.openforum.service.RoleService - Role ID cannot be null
+2024-11-17 20:08:04 INFO  o.openforum.service.RoleService - Deleting role with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.RoleService - Updating role with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.RoleService - Role updated with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.RoleService - Reading role with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.TopicService - ID for search topic is null
+2024-11-17 20:08:04 INFO  o.openforum.service.TopicService - Creating topic with title: Test topic
+2024-11-17 20:08:04 INFO  o.openforum.service.TopicService - Topic created with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.TopicService - ID from TopicDTO is null
+2024-11-17 20:08:04 INFO  o.openforum.service.TopicService - Updating topic with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.TopicService - Topic with ID '1' not found
+2024-11-17 20:08:04 INFO  o.openforum.service.TopicService - Deleting topic with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.TopicService - Updating topic with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.TopicService - Topic updated with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.TopicService - ID for delete topic cannot be null
+2024-11-17 20:08:04 INFO  o.openforum.service.TopicService - Reading topic with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.TopicService - Reading topic with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.TopicService - Topic with ID '1' not found
+2024-11-17 20:08:04 INFO  o.openforum.service.UserService - Deleting user with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.UserService - Reading user with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.UserService - User with ID '1' not found
+2024-11-17 20:08:04 ERROR o.openforum.service.UserService - Username 'test user' is already taken
+2024-11-17 20:08:04 INFO  o.openforum.service.UserService - Updating user with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.UserService - User updated with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.UserService - User ID cannot be null for delete
+2024-11-17 20:08:04 ERROR o.openforum.service.UserService - Email 'email' is already used
+2024-11-17 20:08:04 INFO  o.openforum.service.UserService - Reading user with ID: 1
+2024-11-17 20:08:04 INFO  o.openforum.service.UserService - Updating user with ID: 1
+2024-11-17 20:08:04 ERROR o.openforum.service.UserService - User with ID '1' not found
+2024-11-17 20:08:04 ERROR o.openforum.service.UserService - User ID cannot be null for read
+2024-11-17 20:08:04 ERROR o.openforum.service.UserService - User ID cannot be null for update
+2024-11-17 20:08:04 ERROR o.openforum.service.UserService - Password format is incorrect, it should be at least 6 characters long
+2024-11-17 20:08:04 INFO  o.openforum.service.UserService - Creating user with username: test user
+2024-11-17 20:08:04 INFO  o.openforum.service.UserService - User created with ID: 1
+2024-11-17 20:08:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:08:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-17 20:08:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-11-17 20:08:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

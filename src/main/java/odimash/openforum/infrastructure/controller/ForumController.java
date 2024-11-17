@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import odimash.openforum.infrastructure.database.dto.ForumDTO;
 import odimash.openforum.infrastructure.viewdata.ForumViewData;
 import odimash.openforum.service.ForumService;
 
-@Controller
+@RestController
 @RequestMapping("/forum")
 public class ForumController {
 
@@ -25,21 +26,20 @@ public class ForumController {
 	private ForumService forumService;
 
 	@GetMapping("/{id}")
-	public String getForumById(@PathVariable Long id, Model model) {
+	public ResponseEntity<ForumViewData> getForumById(@PathVariable Long id, Model model) {
 		ForumViewData forumViewData = forumService.getForumViewData(id);
 		model.addAttribute("forum", forumViewData.getForum());
 		model.addAttribute("subcategories", forumViewData.getSubCategories());
 		model.addAttribute("topics", forumViewData.getTopics());
-		return "forum";
+		return ResponseEntity.ok(forumService.getForumViewData(id));
 	}
 
-	@PostMapping("/categories")
-    public String createCategory(@RequestParam String name, @RequestParam Long parentId) {
+	@PostMapping()
+    public ForumDTO createCategory(@RequestParam String name, @RequestParam Long parentId) {
         ForumDTO forumDTO = new ForumDTO();
         forumDTO.setName(name);
         forumDTO.setParentForumId(parentId);
-        forumService.createForum(forumDTO);
-        return "redirect:/" + parentId;
+        return forumService.createForum(forumDTO);
     }
 
 	@PutMapping("/{id}")

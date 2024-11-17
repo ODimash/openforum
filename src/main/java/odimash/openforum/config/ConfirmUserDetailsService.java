@@ -1,4 +1,4 @@
-package odimash.openforum.security;
+package odimash.openforum.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
